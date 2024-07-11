@@ -7,7 +7,7 @@ export type HeroSectionType = {
 const HeroSection: NextPage<HeroSectionType> = ({ className = "" }) => {
   return (
     <section
-      className={`self-stretch flex flex-row items-start justify-start py-[102px] px-[63px] box-border bg-[url('/hero-section@3x.png')] bg-cover bg-no-repeat bg-[top] max-w-full text-left text-45xl text-whites-300 font-body mq750:py-[66px] mq750:px-[31px] mq750:box-border ${className}`}
+      className={`self-stretch h-screen flex flex-row items-start justify-start py-[102px] px-[63px] box-border bg-[url('/hero-section@2.5x.png')] bg-cover bg-no-repeat bg-[top] max-w-full text-left text-45xl text-whites-300 font-body mq750:py-[66px] mq750:px-[31px] mq750:box-border ${className}`}
     >
       <div className="w-[560px] rounded-lg flex flex-col items-start justify-start p-8 box-border gap-[40px] max-w-full mq750:gap-[20px]">
         <div className="self-stretch flex flex-col items-start justify-start gap-[16px] max-w-full">
