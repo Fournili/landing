@@ -34,15 +34,15 @@ const Carousel: NextPage<CarouselType> = ({ className = "" }) => {
 
   return (
     <section
-      className={`self-stretch bg-secondary-100 flex flex-col items-start justify-start py-[88px] px-[296px] box-border gap-[72px] max-w-full text-center text-29xl text-gray-300 font-body mq750:gap-[36px] mq750:pl-[148px] mq750:pr-[148px] mq750:box-border mq1025:pt-[57px] mq1025:pb-[57px] mq1025:box-border mq450:gap-[18px] mq450:py-[37px] px-5 mq450:box-border ${className}`}
+      className={`self-stretch bg-secondary-100 flex flex-col items-start justify-start py-[88px] px-[296px] box-border gap-[72px] max-w-full text-center text-29xl text-gray-300 font-body mq750:gap-[36px] mq750:pl-[148px] mq750:pr-[148px] mq750:box-border mq1025:pt-[57px] mq1025:pb-[57px] mq1025:box-border mq450:gap-[18px] mq450:py-[37px] px-5 mq450:box-border mq450:px-8 ${className}`}
     >
       <h1 className="m-0 w-[742px] relative text-inherit leading-[58px] font-medium font-inherit inline-block max-w-full mq1025:text-19xl mq1025:leading-[46px] mq450:text-10xl mq450:leading-[35px]">
         <span>{`Get to know the `}</span>
         <span className="text-primary-300">people.</span>
       </h1>
-      <div className="w-full flex flex-col items-center justify-start gap-[64px] max-w-full text-left text-5xl mq1025:gap-[32px] mq450:gap-[16px]">
-        <div className="w-full flex flex-row items-center justify-center gap-[56px] max-w-full mq450:gap-[28px]">
-          <button onClick={handlePrev} aria-label="Previous">
+      <div className="w-full flex flex-col items-center justify-start gap-[64px] max-w-full text-left text-5xl mq1025:gap-[32px] mq450:gap-[16px] mq450:max-w-xs">
+        <div className="w-full flex flex-row items-center justify-center gap-[56px] max-w-full mq450:gap-[10px] mq450:max-w-xs mq450:w-xs ">
+          <button onClick={handlePrev} aria-label="Previous" className="mq450:hidden">
             <img
               className="w-8 h-8 relative transform rotate-180"
               loading="lazy"
@@ -75,7 +75,7 @@ const Carousel: NextPage<CarouselType> = ({ className = "" }) => {
               />
             </div>
           </div>
-          <button onClick={handleNext} aria-label="Next">
+          <button onClick={handleNext} aria-label="Next" className="mq450:hidden">
             <img
               className="w-8 h-8 relative"
               loading="lazy"
@@ -86,6 +86,14 @@ const Carousel: NextPage<CarouselType> = ({ className = "" }) => {
         </div>
         <div className="w-[742px] flex flex-row items-start justify-center py-0 px-5 box-border max-w-full">
           <div className="flex flex-row items-start justify-start gap-[16px]">
+          <button onClick={handlePrev} aria-label="Previous" className="hidden mq450:block">
+            <img
+              className="w-8 h-8 relative transform rotate-180"
+              loading="lazy"
+              alt="Previous"
+              src="/iconnext.svg"
+            />
+          </button>
             {data.map((_, index) => (
               <div
                 key={index}
@@ -97,6 +105,14 @@ const Carousel: NextPage<CarouselType> = ({ className = "" }) => {
                 onClick={() => setCurrentIndex(index)}
               />
             ))}
+            <button onClick={handleNext} aria-label="Next" className="hidden mq450:block">
+            <img
+              className="w-8 h-8 relative"
+              loading="lazy"
+              alt="Next"
+              src="/iconnext.svg"
+            />
+          </button>
           </div>
         </div>
       </div>
