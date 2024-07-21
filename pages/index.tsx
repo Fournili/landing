@@ -14,11 +14,11 @@ const FourniliHomepageLandingPag: NextPage = () => {
   return (
     <div className="w-full relative bg-whites-300 flex flex-col items-end justify-start leading-[normal] tracking-[normal]">
       <NavBarLandingPage />
-      <HeroSection/>
+      <HeroSection />
       <FunArt />
       <Facts />
-      <ForResturantsSection />
-      <ForSuppliersSection />
+        <ForResturantsSection />
+        <ForSuppliersSection />
       <FourniliFAQs />
       <Carousel />
       <MobileAdBanner />
@@ -29,3 +29,4 @@ const FourniliHomepageLandingPag: NextPage = () => {
 };
 
 export default FourniliHomepageLandingPag;
+

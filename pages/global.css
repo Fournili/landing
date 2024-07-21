@@ -27,3 +27,7 @@ body {
 ::after {
   border-width: 0;
 }
+
+.no-underline {
+  text-decoration: none;
+}

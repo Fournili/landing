@@ -9,7 +9,7 @@ const ForSuppliersSection: NextPage<ForSuppliersSectionType> = ({
   className = "",
 }) => {
   return (
-    <section
+    <section id="forsupplierssection"
       className={`self-stretch bg-secondary-100 flex flex-col items-center justify-between py-20 px-5 box-border min-h-[566px] max-w-full mq750:pt-[52px] mq750:pb-[52px] mq750:box-border ${className}`}
     >
       <div className="w-[1088px] flex flex-row items-center justify-between max-w-full gap-[20px] mq1125:flex-wrap">

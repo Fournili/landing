@@ -7,29 +7,42 @@ export type CarouselType = {
 
 const Carousel: NextPage<CarouselType> = ({ className = "" }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   const data = [
     {
-      quote: `One of the most important things is being able to talk with my suppliers and building that trust. When I know their food is fantastic and they’re reliable, it cuts down on time and money I spend shopping and trying new products.`,
-      author: `Jacklyn I Chef I Nigiri’s Table I North Algeria`,
-      image: "/image-4@2x.png",
+      quote: `One of the most important things is being able to talk with my suppliers and building that trust. When I know their food is fantastic and they’re reliable, it cuts down on time and money I spend shopping and trying new products. `,
+      author: `Chef Khaled Benmoussa I  La Saveur d'Alger I El Biar, Algiers`,
+      image: "/image-10@2x.png",
     },
     {
-      quote: `Another testimonial quote here.`,
-      author: `Another person I : Joe , Role I ; Location`,
-      image: "/image-4@2x.png",    },
+      quote: `"In the past, sending orders was a struggle, but today it’s automated and simple; the results are truly remarkable.”`,
+      author: `Chef Yacine Boukhalfa I  L'Étoile Culinaire I Kouba, Algiers`,
+      image: "/image-11@2x.png",
+    },
     {
-      quote: `Yet another testimonial quote here.`,
-      author: `Yet another person : Mama ,  I Role I , Location`,
-      image: "/image-4@2x.png",    },
+      quote: `“Since we started using Fournili, the time of placing an order reduced by one hour, and wrong items (delivery) dropped to zero.”`,
+      author: `Chef Riad Mansouri I  LAl-Nakha Al-Sharqiya I Telemly, Algiers`,
+      image: "/image-12@2x.png",
+    },
   ];
 
   const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % data.length);
+    if (isAnimating) return;
+    setIsAnimating(true);
+    setTimeout(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % data.length);
+      setIsAnimating(false);
+    }, 500); // duration in ms
   };
 
   const handlePrev = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + data.length) % data.length);
+    if (isAnimating) return;
+    setIsAnimating(true);
+    setTimeout(() => {
+      setCurrentIndex((prevIndex) => (prevIndex - 1 + data.length) % data.length);
+      setIsAnimating(false);
+    }, 500); // duration in ms
   };
 
   return (
@@ -52,7 +65,11 @@ const Carousel: NextPage<CarouselType> = ({ className = "" }) => {
           </button>
           <div className="flex-1 flex flex-row items-center justify-start min-w-[482px] max-w-full mq750:gap-[32px] mq1125:min-w-full mq450:gap-[16px]">
             <div className="flex-1 flex flex-row items-center justify-start gap-[64px] max-w-full mq750:gap-[32px] mq1025:flex-wrap mq450:gap-[16px]">
-              <div className="w-[333px] flex flex-col items-center justify-start gap-[24px] min-w-[333px] max-w-full mq1025:flex-1">
+              <div
+                className={`w-[333px] flex flex-col items-center justify-start gap-[24px] min-w-[333px] max-w-full mq1025:flex-1 transition-opacity duration-500 ease-in-out ${
+                  isAnimating ? "opacity-0" : "opacity-100"
+                }`}
+              >
                 <img
                   className="w-8 h-8 relative"
                   loading="lazy"
@@ -69,7 +86,9 @@ const Carousel: NextPage<CarouselType> = ({ className = "" }) => {
                 </div>
               </div>
               <img
-                className="h-[402px] flex-1 relative rounded-lg max-w-full overflow-hidden object-cover min-w-[224px]"
+                className={`h-[402px] flex-1 relative rounded-lg max-w-full overflow-hidden object-cover min-w-[224px] transition-opacity duration-500 ease-in-out ${
+                  isAnimating ? "opacity-0" : "opacity-100"
+                }`}
                 alt=""
                 src={data[currentIndex].image}
               />
@@ -86,33 +105,41 @@ const Carousel: NextPage<CarouselType> = ({ className = "" }) => {
         </div>
         <div className="w-[742px] flex flex-row items-start justify-center py-0 px-5 box-border max-w-full">
           <div className="flex flex-row items-start justify-start gap-[16px]">
-          <button onClick={handlePrev} aria-label="Previous" className="hidden mq450:block">
-            <img
-              className="w-8 h-8 relative transform rotate-180"
-              loading="lazy"
-              alt="Previous"
-              src="/iconnext.svg"
-            />
-          </button>
+            <button onClick={handlePrev} aria-label="Previous" className="hidden mq450:block">
+              <img
+                className="w-8 h-8 relative transform rotate-180"
+                loading="lazy"
+                alt="Previous"
+                src="/iconnext.svg"
+              />
+            </button>
             {data.map((_, index) => (
               <div
                 key={index}
-                className={`h-6 w-6 relative rounded-[50%] ${
+                className={`h-6 w-6 relative rounded-[50%] transition-colors duration-500 ${
                   index === currentIndex
                     ? "bg-accent-blue-300"
                     : "bg-accent-blue-100"
                 }`}
-                onClick={() => setCurrentIndex(index)}
+                onClick={() => {
+                  if (!isAnimating) {
+                    setIsAnimating(true);
+                    setTimeout(() => {
+                      setCurrentIndex(index);
+                      setIsAnimating(false);
+                    }, 500); // duration in ms
+                  }
+                }}
               />
             ))}
             <button onClick={handleNext} aria-label="Next" className="hidden mq450:block">
-            <img
-              className="w-8 h-8 relative"
-              loading="lazy"
-              alt="Next"
-              src="/iconnext.svg"
-            />
-          </button>
+              <img
+                className="w-8 h-8 relative"
+                loading="lazy"
+                alt="Next"
+                src="/iconnext.svg"
+              />
+            </button>
           </div>
         </div>
       </div>
