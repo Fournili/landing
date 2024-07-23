@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Link from "next/link";
 import { useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
+import { useTranslation } from "react-i18next";
 
 export type NavBarLandingPageType = {
   className?: string;
@@ -10,13 +11,12 @@ export type NavBarLandingPageType = {
 const NavBarLandingPage: NextPage<NavBarLandingPageType> = ({
   className = "",
 }) => {
-  const [language, setLanguage] = useState("english");
+  const { t, i18n } = useTranslation();
   const [dropdownVisible, setDropdownVisible] = useState(false);
 
   const handleLanguageChange = (lang: string) => {
-    setLanguage(lang);
+    i18n.changeLanguage(lang);
     setDropdownVisible(false);
-    // Add additional logic here to handle language change if needed
   };
 
   const toggleDropdown = () => {
@@ -58,19 +58,19 @@ const NavBarLandingPage: NextPage<NavBarLandingPageType> = ({
             <ul className="py-1">
               <li
                 className={`px-4 py-2 cursor-pointer ${
-                  language === "english" ? "text-red-600" : "text-black"
+                  i18n.language === "en" ? "text-red-600" : "text-black"
                 }`}
-                onClick={() => handleLanguageChange("english")}
+                onClick={() => handleLanguageChange("en")}
               >
-                English
+                {t('NavBarLandingPage.English')}
               </li>
               <li
                 className={`px-4 py-2 cursor-pointer ${
-                  language === "french" ? "text-red-600" : "text-black"
+                  i18n.language === "fr" ? "text-red-600" : "text-black"
                 }`}
-                onClick={() => handleLanguageChange("french")}
+                onClick={() => handleLanguageChange("fr")}
               >
-                French
+                {t('NavBarLandingPage.French')}
               </li>
             </ul>
           </div>
@@ -84,7 +84,7 @@ const NavBarLandingPage: NextPage<NavBarLandingPageType> = ({
             className="cursor-pointer text-black flex flex-row items-center justify-start py-0 px-3"
           >
             <div className="relative leading-[120%] font-medium inline-block min-w-[121px] mq450:text-base mq450:leading-[19px]">
-              For Restaurants
+              {t('NavBarLandingPage.For Restaurants')}
             </div>
           </ScrollLink>
         </div>
@@ -97,7 +97,7 @@ const NavBarLandingPage: NextPage<NavBarLandingPageType> = ({
             className="cursor-pointer text-black flex flex-row items-start justify-start py-0 px-3"
           >
             <div className="w-[121px] relative leading-[120%] font-medium inline-block min-w-[121px] mq450:text-base mq450:leading-[19px]">
-              For Suppliers
+              {t('NavBarLandingPage.For Suppliers')}
             </div>
           </ScrollLink>
         </div>
@@ -107,3 +107,5 @@ const NavBarLandingPage: NextPage<NavBarLandingPageType> = ({
 };
 
 export default NavBarLandingPage;
+
+

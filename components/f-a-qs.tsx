@@ -65,7 +65,7 @@ export default function FAQs() {
             </span>
           </div>
         }
-        className="custom-accordion-item"
+        className="custom-accordion-item "
         onClick={() => handleToggle("1")}
       >
         <div style={{ fontSize: "20px", textAlign: "center" }}>{answer1}</div>

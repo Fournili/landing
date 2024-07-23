@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import LeftContent from "./left-content";
+import { useTranslation } from "react-i18next";
 
 export type ForSuppliersSectionType = {
   className?: string;
@@ -8,6 +9,8 @@ export type ForSuppliersSectionType = {
 const ForSuppliersSection: NextPage<ForSuppliersSectionType> = ({
   className = "",
 }) => {
+  const { t } = useTranslation();
+
   return (
     <section id="forsupplierssection"
       className={`self-stretch bg-secondary-100 flex flex-col items-center justify-between py-20 px-5 box-border min-h-[566px] max-w-full mq750:pt-[52px] mq750:pb-[52px] mq750:box-border ${className}`}
@@ -19,9 +22,10 @@ const ForSuppliersSection: NextPage<ForSuppliersSectionType> = ({
           src="/image-3@2x.png"
         />
         <LeftContent
-          service="For Suppliers"
-          serviceSubheading="By making the process easier for restaurants, we increase the amount of items in their cart and orders placed. We remove the hassle so that you can grow your revenue and build a solid customer base. "
+          service={t('ForSuppliersSection.For Suppliers')}
+          serviceSubheading={t('ForSuppliersSection.By making the process easier for restaurants')}
           vector="/vector-3.svg"
+
         />
       </div>
     </section>

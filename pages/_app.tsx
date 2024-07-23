@@ -3,6 +3,8 @@ import Head from "next/head";
 import type { AppProps } from "next/app";
 import { ThemeProvider, createTheme } from "@mui/material";
 import CssBaseline from "@mui/material/CssBaseline";
+import { I18nextProvider } from 'react-i18next';
+import i18n from '../i18n';
 
 import "./global.css";
 
@@ -31,7 +33,9 @@ export default function MyApp(props: AppProps) {
       <ThemeProvider theme={muiTheme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
-        <Component {...pageProps} />
+        <I18nextProvider i18n={i18n}>
+          <Component {...pageProps} />
+        </I18nextProvider>
       </ThemeProvider>
     </Fragment>
   );

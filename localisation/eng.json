@@ -1,0 +1,71 @@
+{
+"NavBarLandingPage":{
+    "For Restaurants": "For Restaurants",
+    "For Suppliers": "For Suppliers",
+    "English": "English",
+    "French": "French"
+
+},
+"HeroSection": {
+    "For The Foodies": "For The Foodies",
+    "one-stop platform": "As the one-stop platform connecting restaurants and suppliers, we bring the food industry together, so that you can focus on doing what you do best.",
+    "Get Started": "Get Started"
+  
+},
+"Facts":{
+    "Leave the mess in the kitchen":"Leave the mess in the kitchen",
+    "We’ll do the rest":"We’ll do the rest",
+    "We connect":"We connect.",
+    "We bring restaurants and suppliers together so":"We bring restaurants and suppliers together so you can do it all in one spot. Chat with your business partners, track orders in real time, and discover whats out there (all of it)",
+    "We save":"We save.",
+    "Save tou money, save you time":"Save you money, save you time, and save you stress. We decrease order errors by 62%. Skip the endless phone calls, get organized, and focus on what you know best: amazing food.",
+    "We promise":"We promise.",
+    "In the food industry, reliability is key":"In the food industry, reliability is key. We promise the transparency you need to trust the guys on the other end and build reliable partnerships."
+
+},
+"ForRestaurantsSection": {
+    "For all the": "For all the ",
+    "foodies":"foodies ",
+    "out there":"out there.",
+    "We cut your workload in half": "We cut your workload in half. The days of screw ups are over. Order in three clicks, contact with suppliers at your fingertips, and track your items as they drive towards you. And did we mention it’s free?"
+  
+},
+"ForSuppliersSection": {
+    "For Suppliers":"For Suppliers",
+    "By making the process easier for restaurants":"By making the process easier for restaurants, we increase the amount of items in their cart and orders placed. We remove the hassle so that you can grow your revenue and build a solid customer base"
+
+},
+"Carousel": {
+    "Get to know the people": "Get to know the people.",
+    "Quote 1": "One of the most important things is being able to talk with my suppliers and building that trust. When I know their food is fantastic and they’re reliable, it cuts down on time and money I spend shopping and trying new products.",
+    "Chef 1": "Chef Khaled Benmoussa I  La Saveur d'Alger I El Biar, Algiers",
+    "Quote 2": "In the past, sending orders was a struggle, but today it’s automated and simple; the results are truly remarkable.",
+    "Chef 2": "Chef Yacine Boukhalfa I  L'Étoile Culinaire I Kouba, Algiers",
+    "Quote 3": "Since we started using Fournili, the time of placing an order reduced by one hour, and wrong items (delivery) dropped to zero.",
+    "Chef 3": "Chef Riad Mansouri I  LAl-Nakha Al-Sharqiya I Telemly, Algiers"
+
+  },
+"MobileAdBanner":{
+    "Run Your Business":"Run Your Business",
+    "On The Go":"On The Go",
+    "Try our app for free in":"Try our app for free in",
+    "any app store":"any app store"
+
+},
+"Footer":{
+    "Info":"Info",
+    "Homepage":"Homepage",
+    "Restaurants":"Restaurants",
+    "Suppliers":"Suppliers",
+    "Help Center":"Help center",
+    "About":"About",
+    "About Fournili":"About Fournili",
+    "FAQs":"FAQs",
+    "Terms of Service":"Terms of service",
+    "Privacy Policy":"Privacy Policy",
+    "Contact Us":"Contact Us",
+    "Company Address":"Company Address",
+    "Location":"Algeria ,16000"
+
+}
+}

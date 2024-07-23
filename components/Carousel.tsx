@@ -1,28 +1,30 @@
 import { useState } from "react";
 import type { NextPage } from "next";
+import { useTranslation } from "react-i18next";
 
 export type CarouselType = {
   className?: string;
 };
 
 const Carousel: NextPage<CarouselType> = ({ className = "" }) => {
+  const { t } = useTranslation();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 
   const data = [
     {
-      quote: `One of the most important things is being able to talk with my suppliers and building that trust. When I know their food is fantastic and they’re reliable, it cuts down on time and money I spend shopping and trying new products. `,
-      author: `Chef Khaled Benmoussa I  La Saveur d'Alger I El Biar, Algiers`,
+      quote: t("Carousel.Quote 1"),
+      author: t("Carousel.Chef 1"),
       image: "/image-10@2x.png",
     },
     {
-      quote: `"In the past, sending orders was a struggle, but today it’s automated and simple; the results are truly remarkable.”`,
-      author: `Chef Yacine Boukhalfa I  L'Étoile Culinaire I Kouba, Algiers`,
+      quote: t("Carousel.Quote 2"),
+      author: t("Carousel.Chef 2"),
       image: "/image-11@2x.png",
     },
     {
-      quote: `“Since we started using Fournili, the time of placing an order reduced by one hour, and wrong items (delivery) dropped to zero.”`,
-      author: `Chef Riad Mansouri I  LAl-Nakha Al-Sharqiya I Telemly, Algiers`,
+      quote: t("Carousel.Quote 3"),
+      author: t("Carousel.Chef 3"),
       image: "/image-12@2x.png",
     },
   ];
@@ -50,8 +52,7 @@ const Carousel: NextPage<CarouselType> = ({ className = "" }) => {
       className={`self-stretch bg-secondary-100 flex flex-col items-start justify-start py-[88px] px-[296px] box-border gap-[72px] max-w-full text-center text-29xl text-gray-300 font-body mq750:gap-[36px] mq750:pl-[148px] mq750:pr-[148px] mq750:box-border mq1025:pt-[57px] mq1025:pb-[57px] mq1025:box-border mq450:gap-[18px] mq450:py-[37px] px-5 mq450:box-border mq450:px-8 ${className}`}
     >
       <h1 className="m-0 w-[742px] relative text-inherit leading-[58px] font-medium font-inherit inline-block max-w-full mq1025:text-19xl mq1025:leading-[46px] mq450:text-10xl mq450:leading-[35px]">
-        <span>{`Get to know the `}</span>
-        <span className="text-primary-300">people.</span>
+        <span>{t("Carousel.Get to know the people")}</span>
       </h1>
       <div className="w-full flex flex-col items-center justify-start gap-[64px] max-w-full text-left text-5xl mq1025:gap-[32px] mq450:gap-[16px] mq450:max-w-xs">
         <div className="w-full flex flex-row items-center justify-center gap-[56px] max-w-full mq450:gap-[10px] mq450:max-w-xs mq450:w-xs ">
@@ -148,3 +149,4 @@ const Carousel: NextPage<CarouselType> = ({ className = "" }) => {
 };
 
 export default Carousel;
+

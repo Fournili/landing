@@ -25,7 +25,7 @@ const LeftContent: NextPage<LeftContentType> = ({
           {serviceSubheading}
         </div>
       </div>
-      <button className="cursor-pointer [border:none] py-[13.5px] px-6 bg-primary-300 shadow-[0px_2px_2px_rgba(0,_0,_0,_0.1)] rounded-lg flex flex-row items-center justify-center gap-[8px]">
+      <button className="hidden cursor-pointer [border:none] py-[13.5px] px-6 bg-primary-300 shadow-[0px_2px_2px_rgba(0,_0,_0,_0.1)] rounded-lg flex flex-row items-center justify-center gap-[8px]">
         <div className="overflow-hidden hidden flex-col items-start justify-start p-[9px] box-border w-[px] h-[px]">
           <img className="w-[25.7px] h-[25.7px] relative" alt="" src={vector} />
         </div>
