@@ -64,6 +64,16 @@
     "Company Address":"Addresse ",
     "Location":"Algérie ,16000"
 
-}
+},
+"FAQs": {
+      "Do my suppliers need to be on Fournili?": "Mes fournisseurs doivent-ils être sur Fournili ?",
+      "How much does Fournili cost?": "Combien coûte Fournili ?",
+      "What is Fournili?": "Qu'est-ce que Fournili ?",
+      "Who is Fournili for?": "Pour qui est Fournili ?",
+      "answer1": "Non, vos fournisseurs n'ont pas besoin d'être sur l'application Fournili. Vous pouvez choisir parmi les fournisseurs que nous proposons via l'application ou inviter vos propres fournisseurs.",
+      "answer2": "Fournili est entièrement gratuit. Oui, vous avez bien lu—absolument gratuit !",
+      "answer3": "Fournili est une plateforme de marché B2B en ligne qui facilite le traitement des commandes et la communication entre les restaurants et les fournisseurs.",
+      "answer4": "Tout restaurant, café, cuisine fantôme, service traiteur - en gros, toute personne achetant des produits alimentaires auprès de fournisseurs et toute personne vendant à des restaurants. En gros, toute personne dans l'industrie de l'approvisionnement alimentaire souhaitant optimiser ses opérations."
+    }
     
     }

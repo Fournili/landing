@@ -1,17 +1,14 @@
 import React, { useState } from "react";
 import { Accordion, AccordionItem } from "@nextui-org/accordion";
+import { useTranslation } from "react-i18next";
 
 export default function FAQs() {
+  const { t } = useTranslation();
   const [expanded, setExpanded] = useState<string | null>(null);
 
   const handleToggle = (key: string) => {
     setExpanded(expanded === key ? null : key);
   };
-
-  const answer1 = "No, your suppliers do not need to be on the Fournili app. You can choose from the suppliers we provide through the app or invite your own suppliers.";
-  const answer2 = "Fournili is completely free to use. Yes, you read that right—absolutely free!";
-  const answer3 = "Fournili is an online B2B marketplace platform that facilitates order processing and communication between restaurants and suppliers";
-  const answer4 = "Any restaurant, café, cloud kitchen, catering business - basically anyone  who buys food items from suppliers and anyone who sells to restaurants. Basically anyone in the food-supply industry who wants to optimize their operations.";
 
   return (
     <Accordion
@@ -58,7 +55,7 @@ export default function FAQs() {
         title={
           <div style={{ display: "flex", justifyContent: "center", alignItems: "center", width: "100%" }}>
             <span style={{ fontSize: "24px", fontWeight: "bold", textAlign: "center" }}>
-              Do my suppliers need to be on Fournili?
+              {t('FAQs.Do my suppliers need to be on Fournili?')}
             </span>
             <span style={{ fontSize: "24px", fontWeight: "bold", marginLeft: "auto" }}>
               {expanded === "1" ? "-" : "+"}
@@ -68,7 +65,7 @@ export default function FAQs() {
         className="custom-accordion-item "
         onClick={() => handleToggle("1")}
       >
-        <div style={{ fontSize: "20px", textAlign: "center" }}>{answer1}</div>
+        <div style={{ fontSize: "20px", textAlign: "center" }}>{t('FAQs.answer1')}</div>
       </AccordionItem>
       <AccordionItem
         key="2"
@@ -76,7 +73,7 @@ export default function FAQs() {
         title={
           <div style={{ display: "flex", justifyContent: "center", alignItems: "center", width: "100%" }}>
             <span style={{ fontSize: "24px", fontWeight: "bold", textAlign: "center" }}>
-              How much does Fournili cost?
+              {t('FAQs.How much does Fournili cost?')}
             </span>
             <span style={{ fontSize: "24px", fontWeight: "bold", marginLeft: "auto" }}>
               {expanded === "2" ? "-" : "+"}
@@ -86,7 +83,7 @@ export default function FAQs() {
         className="custom-accordion-item"
         onClick={() => handleToggle("2")}
       >
-        <div style={{ fontSize: "20px", textAlign: "center" }}>{answer2}</div>
+        <div style={{ fontSize: "20px", textAlign: "center" }}>{t('FAQs.answer2')}</div>
       </AccordionItem>
       <AccordionItem
         key="3"
@@ -94,7 +91,7 @@ export default function FAQs() {
         title={
           <div style={{ display: "flex", justifyContent: "center", alignItems: "center", width: "100%" }}>
             <span style={{ fontSize: "24px", fontWeight: "bold", textAlign: "center" }}>
-              What is Fournili?
+              {t('FAQs.What is Fournili?')}
             </span>
             <span style={{ fontSize: "24px", fontWeight: "bold", marginLeft: "auto" }}>
               {expanded === "3" ? "-" : "+"}
@@ -104,7 +101,7 @@ export default function FAQs() {
         className="custom-accordion-item"
         onClick={() => handleToggle("3")}
       >
-        <div style={{ fontSize: "20px", textAlign: "center" }}>{answer3}</div>
+        <div style={{ fontSize: "20px", textAlign: "center" }}>{t('FAQs.answer3')}</div>
       </AccordionItem>
       <AccordionItem
         key="4"
@@ -112,7 +109,7 @@ export default function FAQs() {
         title={
           <div style={{ display: "flex", justifyContent: "center", alignItems: "center", width: "100%" }}>
             <span style={{ fontSize: "24px", fontWeight: "bold", textAlign: "center" }}>
-              Who is Fournili for?
+              {t('FAQs.Who is Fournili for?')}
             </span>
             <span style={{ fontSize: "24px", fontWeight: "bold", marginLeft: "auto" }}>
               {expanded === "4" ? "-" : "+"}
@@ -122,8 +119,9 @@ export default function FAQs() {
         className="custom-accordion-item"
         onClick={() => handleToggle("4")}
       >
-        <div style={{ fontSize: "20px", textAlign: "center" }}>{answer4}</div>
+        <div style={{ fontSize: "20px", textAlign: "center" }}>{t('FAQs.answer4')}</div>
       </AccordionItem>
     </Accordion>
   );
 }
+

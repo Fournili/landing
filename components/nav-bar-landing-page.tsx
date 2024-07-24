@@ -51,7 +51,7 @@ const NavBarLandingPage: NextPage<NavBarLandingPageType> = ({
             />
           </div>
           <div
-            className={`absolute top-full mt-2 w-32 bg-white shadow-md rounded-lg transition-opacity duration-300 ease-in-out ${
+            className={`absolute top-full left-[-50px] mt-2 w-32 bg-white shadow-md rounded-lg transition-opacity duration-300 ease-in-out ${
               dropdownVisible ? "opacity-100 visible" : "opacity-0 invisible"
             }`}
           >
@@ -75,7 +75,7 @@ const NavBarLandingPage: NextPage<NavBarLandingPageType> = ({
             </ul>
           </div>
         </div>
-        <div className="rounded-lg flex flex-row items-start justify-start p-4 z-[1]">
+        <div className="hidden sm:flex rounded-lg flex flex-row items-start justify-start p-4 z-[1]">
           <ScrollLink
             to="forrestaurantssection"
             smooth={true}
@@ -88,7 +88,7 @@ const NavBarLandingPage: NextPage<NavBarLandingPageType> = ({
             </div>
           </ScrollLink>
         </div>
-        <div className="rounded-lg flex flex-row items-start justify-start p-4 z-[1]">
+        <div className="hidden sm:flex rounded-lg flex flex-row items-start justify-start p-4 z-[1]">
           <ScrollLink
             to="forsupplierssection"
             smooth={true}
@@ -107,5 +107,6 @@ const NavBarLandingPage: NextPage<NavBarLandingPageType> = ({
 };
 
 export default NavBarLandingPage;
+
 
 
