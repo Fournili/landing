@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import { useTranslation } from "react-i18next";
 import Link from "next/link";
+import Image from "next/image";
 
 export type FooterType = {
   className?: string;
@@ -15,13 +16,16 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
       <div className="flex-1 flex flex-col items-start justify-start max-w-full">
         <div className="self-stretch flex flex-row items-start justify-between p-16 box-border max-w-full gap-[20px] mq750:pl-8 mq750:pr-8 mq750:box-border mq1025:flex-wrap mq450:pt-[42px] mq450:pb-[42px] mq450:box-border">
           <div className="w-[550px] flex flex-row items-start justify-start gap-[104px] max-w-full mq750:flex-wrap mq750:gap-[52px] mq450:gap-[26px]">
-          <Link href="/" passHref>
-            <img
-              className="h-[25px] w-[93px] relative object-contain"
-              loading="lazy"
-              alt=""
-              src="/logo@2x.png"
-            />
+            <Link href="/" passHref>
+              <Image
+                className="h-[25px] w-[93px] relative object-contain"
+                loading="lazy"
+                alt="Logo"
+                src="/logo@2x.png"
+                width={93}
+                height={25}
+                quality={75}
+              />
             </Link>
             <div className="flex-1 flex flex-row items-start justify-start gap-[88px] min-w-[229px] max-w-full mq450:flex-wrap mq450:gap-[44px]">
               <div className="w-28 flex flex-col items-start justify-start gap-[16px] min-w-[112px] mq450:flex-1">
@@ -29,20 +33,20 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                   {t('Footer.Info')}
                 </div>
                 <div className="self-stretch flex flex-col items-start justify-start gap-[16px] text-xl text-greys-300">
-                <Link href="/" passHref>
-                  <div className="text-dimgray-100 w-[101px] relative leading-[120%] font-medium inline-block mq450:text-base mq450:leading-[19px]">
-                    {t('Footer.Homepage')}
-                  </div>
+                  <Link href="/" passHref>
+                    <div className="text-dimgray-100 w-[101px] relative leading-[120%] font-medium inline-block mq450:text-base mq450:leading-[19px]">
+                      {t('Footer.Homepage')}
+                    </div>
                   </Link>
                   <Link href="/#forrestaurantssection">
-                  <div className="text-dimgray-100 w-[109px] relative leading-[120%] font-medium inline-block mq450:text-base mq450:leading-[19px]">
-                    {t('Footer.Restaurants')}
-                  </div>
+                    <div className="text-dimgray-100 w-[109px] relative leading-[120%] font-medium inline-block mq450:text-base mq450:leading-[19px]">
+                      {t('Footer.Restaurants')}
+                    </div>
                   </Link>
-                  <Link style={{ textDecoration: "none" }} href="/#forsupplierssection">
-                  <div className="text-dimgray-100 relative leading-[120%] font-medium inline-block min-w-[86px] mq450:text-base mq450:leading-[19px]">
-                    {t('Footer.Suppliers')}
-                  </div>
+                  <Link href="/#forsupplierssection">
+                    <div className="text-dimgray-100 relative leading-[120%] font-medium inline-block min-w-[86px] mq450:text-base mq450:leading-[19px]">
+                      {t('Footer.Suppliers')}
+                    </div>
                   </Link>
                   <div className="text-dimgray-100 self-stretch relative leading-[120%] font-medium mq450:text-base mq450:leading-[19px]">
                     {t('Footer.Help Center')}
@@ -58,9 +62,9 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                     {t('Footer.About Fournili')}
                   </div>
                   <Link href="/#FAQ">
-                  <div className="text-dimgray-100 relative leading-[120%] font-medium inline-block min-w-[49px] mq450:text-base mq450:leading-[19px]">
-                    {t('Footer.FAQs')}
-                  </div>
+                    <div className="text-dimgray-100 relative leading-[120%] font-medium inline-block min-w-[49px] mq450:text-base mq450:leading-[19px]">
+                      {t('Footer.FAQs')}
+                    </div>
                   </Link>
                   <div className="text-dimgray-100 self-stretch relative leading-[120%] font-medium mq450:text-base mq450:leading-[19px]">
                     {t('Footer.Terms of Service')}
@@ -91,15 +95,21 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
               </div>
             </div>
             <div className="w-[147px] flex flex-col items-start justify-start gap-[16px]">
-              <img
+              <Image
                 className="self-stretch h-[41px] relative rounded-lg max-w-full overflow-hidden shrink-0"
-                alt=""
+                alt="Apple Store"
                 src="/apple-button-contents-1.svg"
+                width={147}
+                height={41}
+                quality={75}
               />
-              <img
+              <Image
                 className="self-stretch h-[41px] relative rounded-lg max-w-full overflow-hidden shrink-0"
-                alt=""
+                alt="Google Play Store"
                 src="/google-button-contents-1.svg"
+                width={147}
+                height={41}
+                quality={75}
               />
             </div>
           </div>

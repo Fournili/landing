@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import LeftContent from "./left-content";
 import { useTranslation } from "react-i18next";
+import Image from "next/image";
 
 export type ForResturantsSectionType = {
   className?: string;
@@ -27,11 +28,15 @@ const ForResturantsSection: NextPage<ForResturantsSectionType> = ({
           serviceSubheading={t("ForRestaurantsSection.We cut your workload in half")}
           vector="/vector-2.svg"
         />
-        <img
-          className="w-[479px] relative rounded-lg max-h-full object-cover max-w-full mq1125:flex-1"
-          alt=""
-          src="/image-2@2x.png"
-        />
+          <Image
+            alt="Restaurants Section Image"
+            src="/image-2@2x.png"
+            layout="responsive"
+            width={479} 
+            height={320} 
+            quality={75} 
+            className="rounded-lg object-cover" 
+          />
       </div>
     </section>
   );

@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Link from "next/link";
-import { useState } from "react";
+import Image from "next/image";
+import { useState, useEffect } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { useTranslation } from "react-i18next";
 
@@ -13,6 +14,7 @@ const NavBarLandingPage: NextPage<NavBarLandingPageType> = ({
 }) => {
   const { t, i18n } = useTranslation();
   const [dropdownVisible, setDropdownVisible] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   const handleLanguageChange = (lang: string) => {
     i18n.changeLanguage(lang);
@@ -23,17 +25,30 @@ const NavBarLandingPage: NextPage<NavBarLandingPageType> = ({
     setDropdownVisible(!dropdownVisible);
   };
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 640);
+    };
+
+    handleResize(); // Set initial value based on current window size
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <nav
       className={`self-stretch flex flex-row font-body items-center justify-between py-2 px-4 sticky top-0 z-10 w-full bg-[#e6e4d5] shadow-md ${className}`}
     >
       <div className="flex items-center">
         <Link href="/" passHref>
-          <img
-            className="h-16 w-[110px] relative object-contain z-[1]"
-            loading="lazy"
-            alt="Fournili Logo"
+        <Image
             src="/plan-de-travail-1-copie-3-2@2x.png"
+            alt="Fournili Logo"
+            width={110}
+            height={64}
+            className="relative object-contain z-[1]"
+            priority={true} // Set priority for critical images
           />
         </Link>
       </div>
@@ -75,7 +90,13 @@ const NavBarLandingPage: NextPage<NavBarLandingPageType> = ({
             </ul>
           </div>
         </div>
-        <div className="hidden sm:flex rounded-lg flex flex-row items-start justify-start p-4 z-[1]">
+        {/* For Restaurants Section */}
+        <div
+          style={{
+            display: isMobile ? 'none' : 'flex',
+          }}
+          className="rounded-lg flex flex-row items-start justify-start p-4 z-[1]"
+        >
           <ScrollLink
             to="forrestaurantssection"
             smooth={true}
@@ -88,7 +109,13 @@ const NavBarLandingPage: NextPage<NavBarLandingPageType> = ({
             </div>
           </ScrollLink>
         </div>
-        <div className="hidden sm:flex rounded-lg flex flex-row items-start justify-start p-4 z-[1]">
+        {/* For Suppliers Section */}
+        <div
+          style={{
+            display: isMobile ? 'none' : 'flex',
+          }}
+          className="rounded-lg flex flex-row items-start justify-start p-4 z-[1]"
+        >
           <ScrollLink
             to="forsupplierssection"
             smooth={true}

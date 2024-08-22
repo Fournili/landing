@@ -5,7 +5,9 @@ import { useTranslation } from "react-i18next";
 export default function FAQs() {
   const { t } = useTranslation();
   const [expanded, setExpanded] = useState<string | null>(null);
-
+  const itemClasses = {
+    base: "bg-secondary-100 ",
+  };
   const handleToggle = (key: string) => {
     setExpanded(expanded === key ? null : key);
   };

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import type { NextPage } from "next";
 import { useTranslation } from "react-i18next";
+import Image from "next/image";
 
 export type CarouselType = {
   className?: string;
@@ -35,7 +36,7 @@ const Carousel: NextPage<CarouselType> = ({ className = "" }) => {
     setTimeout(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % data.length);
       setIsAnimating(false);
-    }, 500); // duration in ms
+    }, 500);
   };
 
   const handlePrev = () => {
@@ -44,7 +45,7 @@ const Carousel: NextPage<CarouselType> = ({ className = "" }) => {
     setTimeout(() => {
       setCurrentIndex((prevIndex) => (prevIndex - 1 + data.length) % data.length);
       setIsAnimating(false);
-    }, 500); // duration in ms
+    }, 500);
   };
 
   return (
@@ -57,11 +58,12 @@ const Carousel: NextPage<CarouselType> = ({ className = "" }) => {
       <div className="w-full flex flex-col items-center justify-start gap-[64px] max-w-full text-left text-5xl mq1025:gap-[32px] mq450:gap-[16px] mq450:max-w-xs">
         <div className="w-full flex flex-row items-center justify-center gap-[56px] max-w-full mq450:gap-[10px] mq450:max-w-xs mq450:w-xs ">
           <button onClick={handlePrev} aria-label="Previous" className="mq450:hidden">
-            <img
+            <Image
               className="w-8 h-8 relative transform rotate-180"
-              loading="lazy"
               alt="Previous"
               src="/iconnext.svg"
+              width={32}
+              height={32}
             />
           </button>
           <div className="flex-1 flex flex-row items-center justify-start min-w-[482px] max-w-full mq750:gap-[32px] mq1125:min-w-full mq450:gap-[16px]">
@@ -71,11 +73,12 @@ const Carousel: NextPage<CarouselType> = ({ className = "" }) => {
                   isAnimating ? "opacity-0" : "opacity-100"
                 }`}
               >
-                <img
+                <Image
                   className="w-8 h-8 relative"
-                  loading="lazy"
-                  alt=""
+                  alt="Quote Icon"
                   src="/quoteicon.svg"
+                  width={32}
+                  height={32}
                 />
                 <div className="self-stretch flex flex-col items-start justify-start gap-[24px]">
                   <div className="self-stretch relative leading-[120%] mq450:text-lgi mq450:leading-[23px]">
@@ -86,32 +89,36 @@ const Carousel: NextPage<CarouselType> = ({ className = "" }) => {
                   </div>
                 </div>
               </div>
-              <img
+              <Image
                 className={`h-[402px] flex-1 relative rounded-lg max-w-full overflow-hidden object-cover min-w-[224px] transition-opacity duration-500 ease-in-out ${
                   isAnimating ? "opacity-0" : "opacity-100"
                 }`}
-                alt=""
+                alt={data[currentIndex].author}
                 src={data[currentIndex].image}
+                width={402}
+                height={402}
               />
             </div>
           </div>
           <button onClick={handleNext} aria-label="Next" className="mq450:hidden">
-            <img
+            <Image
               className="w-8 h-8 relative"
-              loading="lazy"
               alt="Next"
               src="/iconnext.svg"
+              width={32}
+              height={32}
             />
           </button>
         </div>
         <div className="w-[742px] flex flex-row items-start justify-center py-0 px-5 box-border max-w-full">
           <div className="flex flex-row items-start justify-start gap-[16px]">
             <button onClick={handlePrev} aria-label="Previous" className="hidden mq450:block">
-              <img
+              <Image
                 className="w-8 h-8 relative transform rotate-180"
-                loading="lazy"
                 alt="Previous"
                 src="/iconnext.svg"
+                width={32}
+                height={32}
               />
             </button>
             {data.map((_, index) => (
@@ -128,17 +135,18 @@ const Carousel: NextPage<CarouselType> = ({ className = "" }) => {
                     setTimeout(() => {
                       setCurrentIndex(index);
                       setIsAnimating(false);
-                    }, 500); // duration in ms
+                    }, 500);
                   }
                 }}
               />
             ))}
             <button onClick={handleNext} aria-label="Next" className="hidden mq450:block">
-              <img
+              <Image
                 className="w-8 h-8 relative"
-                loading="lazy"
                 alt="Next"
                 src="/iconnext.svg"
+                width={32}
+                height={32}
               />
             </button>
           </div>
@@ -149,4 +157,3 @@ const Carousel: NextPage<CarouselType> = ({ className = "" }) => {
 };
 
 export default Carousel;
-

@@ -38,6 +38,9 @@ module.exports = {
         "accent-blue-100": "#e6e7ff",
         "accent-blue-300": "#575cd2",
       },
+      backgroundColor: {
+        'accordion-item': '#fff',
+      },
       spacing: {},
       fontFamily: {
         body: "'Circular Std'",
