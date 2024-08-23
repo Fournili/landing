@@ -8,6 +8,11 @@ export type CarouselType = {
 };
 
 const Carousel: NextPage<CarouselType> = ({ className = "" }) => {
+  const showTestimonials = process.env.NEXT_PUBLIC_SHOW_TESTIMONIALS === 'true';
+  if (!showTestimonials) {
+    return null;
+  }
+
   const { t } = useTranslation();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);

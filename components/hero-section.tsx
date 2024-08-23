@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import { useTranslation } from "react-i18next";
 import Image from "next/image";
+import Link from "next/link";
 
 export type HeroSectionType = {
   className?: string;
@@ -25,21 +26,30 @@ const HeroSection: NextPage<HeroSectionType> = ({ className = "" }) => {
             {t("HeroSection.one-stop platform")}
           </div>
         </div>
-        <button className="cursor-pointer border-none py-[13.5px] px-6 bg-primary-300 shadow-[0px_2px_2px_rgba(0,_0,_0,_0.1)] rounded-lg flex flex-row items-start justify-start gap-[8px]">
-          <div className="overflow-hidden flex-col items-start justify-start p-[9px] box-border hidden">
-            <Image
-              className="w-[25.7px] h-[25.7px] relative"
-              alt=""
-              src="/vector-1.svg"
-              width={26}
-              height={26} 
-              priority={false} 
-            />
-          </div>
-          <b className="relative text-5xl leading-[29px] font-body text-gray-100 text-left whitespace-nowrap mq450:text-lgi mq450:leading-[23px]">
-            {t("HeroSection.Get Started")}
-          </b>
-        </button>
+        <Link href="https://www.linkedin.com/company/fournili/" style={{ textDecoration: 'none' }}>
+  <button
+    className="cursor-pointer border-none py-[13.5px] px-6 bg-primary-300 shadow-[0px_2px_2px_rgba(0,_0,_0,_0.1)] rounded-lg flex flex-row items-start justify-start gap-[8px]"
+  >
+    <div className="overflow-hidden flex-col items-start justify-start p-[9px] box-border hidden">
+      <Image
+        className="w-[25.7px] h-[25.7px] relative"
+        alt=""
+        src="/vector-1.svg"
+        width={26}
+        height={26}
+        priority={false}
+      />
+    </div>
+    <b
+      className="relative text-5xl leading-[29px] font-body text-gray-100 text-left whitespace-nowrap mq450:text-lgi mq450:leading-[23px]"
+
+    >
+      {t("HeroSection.Get Started")}
+    </b>
+  </button>
+</Link>
+
+
       </div>
     </section>
   );

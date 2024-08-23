@@ -5,6 +5,7 @@ import ForResturantsSection from "../components/for-resturants-section";
 import ForSuppliersSection from "../components/for-suppliers-section";
 import FourniliFAQs from "../components/fournili-f-a-qs";
 import Carousel from "../components/Carousel";
+import Qpp from "../components/newfaq";
 import MobileAdBanner from "../components/mobile-ad-banner";
 import Footer from "../components/footer";
 import HeroSection from "../components/hero-section";
@@ -20,7 +21,6 @@ const FourniliHomepageLandingPag: NextPage = () => {
         <ForResturantsSection />
         <ForSuppliersSection />
       <FourniliFAQs />
-      <Carousel />
       <MobileAdBanner />
       <FunArt />
       <Footer />

@@ -1,48 +1,47 @@
-import React, { useState } from "react";
-import { CAccordion ,CAccordionItem ,CAccordionHeader,CAccordionBody} from '@coreui/react';
-import { useTranslation } from "react-i18next";
+import React from 'react';
+import Accordion from './Accordion';
+import { useTranslation } from 'react-i18next';
 
-export default function App() {
-  const defaultContent =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+const Qpp: React.FC = () => {
+  const { t } = useTranslation();
+
+  const accordionData = [
+    {
+      title: t('FAQs.Do my suppliers need to be on Fournili?'),
+      content: t('FAQs.answer1'),
+    },
+    {
+      title: t('FAQs.How much does Fournili cost?'),
+      content: t('FAQs.answer2'),
+    },
+    {
+      title: t('FAQs.What is Fournili?'),
+      content: t('FAQs.answer3'),
+    },
+    {
+      title: t('FAQs.Who is Fournili for?'),
+      content: t('FAQs.answer4'),
+    },
+  ];
 
   return (
-
-<CAccordion flush>
-  <CAccordionItem itemKey={1}>
-    <CAccordionHeader>Accordion Item #1</CAccordionHeader>
-    <CAccordionBody>
-      <strong>This is the first item's accordion body.</strong> It is hidden by default, until the
-      collapse plugin adds the appropriate classes that we use to style each element. These classes
-      control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-      modify any of this with custom CSS or overriding our default variables. It's also worth noting
-      that just about any HTML can go within the <code>.accordion-body</code>, though the transition
-      does limit overflow.
-    </CAccordionBody>
-  </CAccordionItem>
-  <CAccordionItem itemKey={2}>
-    <CAccordionHeader>Accordion Item #2</CAccordionHeader>
-    <CAccordionBody>
-      <strong>This is the second item's accordion body.</strong> It is hidden by default, until the
-      collapse plugin adds the appropriate classes that we use to style each element. These classes
-      control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-      modify any of this with custom CSS or overriding our default variables. It's also worth noting
-      that just about any HTML can go within the <code>.accordion-body</code>, though the transition
-      does limit overflow.
-    </CAccordionBody>
-  </CAccordionItem>
-  <CAccordionItem itemKey={3}>
-    <CAccordionHeader>Accordion Item #3</CAccordionHeader>
-    <CAccordionBody>
-      <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
-      collapse plugin adds the appropriate classes that we use to style each element. These classes
-      control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-      modify any of this with custom CSS or overriding our default variables. It's also worth noting
-      that just about any HTML can go within the <code>.accordion-body</code>, though the transition
-      does limit overflow.
-    </CAccordionBody>
-  </CAccordionItem>
-</CAccordion>
-
+    <section 
+      className={`self-stretch flex flex-col items-center justify-start py-[24px] px-16 box-border max-w-full text-center text-29xl font-body mq750:pl-8 mq750:pr-8 mq750:box-border mq1025:pt-[68px] mq1025:pb-[68px] mq1025:box-border mq450:pt-11 mq450:pb-11 mq450:box-border `}
+    >
+      <div className="self-stretch rounded-lg bg-white box-border flex flex-col items-center justify-start py-20 px-0 relative max-w-full border-[12px] border-solid border-primary-300">
+        <div className="w-full flex flex-col items-center justify-start gap-[48px] max-w-full">
+          <h1 className="bg-white m-0 relative text-inherit leading-[58px] font-medium font-inherit inline-block mq1025:text-19xl mq1025:leading-[46px] mq450:text-10xl mq450:leading-[35px]">
+            FAQs
+          </h1>
+          <div className="self-stretch flex flex-col items-center justify-start max-w-full px-5">
+      {accordionData.map((item, index) => (
+        <Accordion key={index} title={item.title} content={item.content} />
+      ))}
+      </div>
+      </div>
+      </div>
+    </section>
   );
-}
+};
+
+export default Qpp;

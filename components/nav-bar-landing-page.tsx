@@ -30,7 +30,7 @@ const NavBarLandingPage: NextPage<NavBarLandingPageType> = ({
       setIsMobile(window.innerWidth < 640);
     };
 
-    handleResize(); // Set initial value based on current window size
+    handleResize(); 
     window.addEventListener("resize", handleResize);
 
     return () => window.removeEventListener("resize", handleResize);
@@ -48,7 +48,7 @@ const NavBarLandingPage: NextPage<NavBarLandingPageType> = ({
             width={110}
             height={64}
             className="relative object-contain z-[1]"
-            priority={true} // Set priority for critical images
+            priority={true} 
           />
         </Link>
       </div>

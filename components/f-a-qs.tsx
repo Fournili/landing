@@ -5,9 +5,7 @@ import { useTranslation } from "react-i18next";
 export default function FAQs() {
   const { t } = useTranslation();
   const [expanded, setExpanded] = useState<string | null>(null);
-  const itemClasses = {
-    base: "bg-secondary-100 ",
-  };
+
   const handleToggle = (key: string) => {
     setExpanded(expanded === key ? null : key);
   };
@@ -54,6 +52,7 @@ export default function FAQs() {
       <AccordionItem
         key="1"
         aria-label="Accordion 1"
+        indicator=" "
         title={
           <div style={{ display: "flex", justifyContent: "center", alignItems: "center", width: "100%" }}>
             <span style={{ fontSize: "24px", fontWeight: "bold", textAlign: "center" }}>
@@ -72,6 +71,7 @@ export default function FAQs() {
       <AccordionItem
         key="2"
         aria-label="Accordion 2"
+        indicator=" "
         title={
           <div style={{ display: "flex", justifyContent: "center", alignItems: "center", width: "100%" }}>
             <span style={{ fontSize: "24px", fontWeight: "bold", textAlign: "center" }}>
@@ -82,7 +82,7 @@ export default function FAQs() {
             </span>
           </div>
         }
-        className="custom-accordion-item"
+        className="custom-accordion-item remove-grey-box"
         onClick={() => handleToggle("2")}
       >
         <div style={{ fontSize: "20px", textAlign: "center" }}>{t('FAQs.answer2')}</div>
@@ -90,6 +90,7 @@ export default function FAQs() {
       <AccordionItem
         key="3"
         aria-label="Accordion 3"
+        indicator=" "
         title={
           <div style={{ display: "flex", justifyContent: "center", alignItems: "center", width: "100%" }}>
             <span style={{ fontSize: "24px", fontWeight: "bold", textAlign: "center" }}>
@@ -108,6 +109,7 @@ export default function FAQs() {
       <AccordionItem
         key="4"
         aria-label="Accordion 4"
+        indicator=" "
         title={
           <div style={{ display: "flex", justifyContent: "center", alignItems: "center", width: "100%" }}>
             <span style={{ fontSize: "24px", fontWeight: "bold", textAlign: "center" }}>

@@ -39,7 +39,7 @@ module.exports = {
         "accent-blue-300": "#575cd2",
       },
       backgroundColor: {
-        'accordion-item': '#fff',
+        'accordion-item': 'transparent',
       },
       spacing: {},
       fontFamily: {
