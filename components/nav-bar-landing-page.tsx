@@ -42,8 +42,8 @@ const NavBarLandingPage: NextPage<NavBarLandingPageType> = ({
     >
       <div className="flex items-center">
         <Link href="/" passHref>
-        <Image
-            src="/plan-de-travail-1-copie-3-2@2x.png"
+          <Image
+            src="/plan-de-travail-1-copie-4-2@2x.svg"
             alt="Fournili Logo"
             width={110}
             height={64}
@@ -69,25 +69,46 @@ const NavBarLandingPage: NextPage<NavBarLandingPageType> = ({
             className={`absolute top-full left-[-50px] mt-2 w-32 bg-white shadow-md rounded-lg transition-opacity duration-300 ease-in-out ${
               dropdownVisible ? "opacity-100 visible" : "opacity-0 invisible"
             }`}
+             // change for spacing : style={{ right: isMobile ? '5px' : 'auto', left: isMobile ? 'auto' : '-50px' }}
           >
-            <ul className="py-1">
-              <li
-                className={`px-4 py-2 cursor-pointer ${
-                  i18n.language === "en" ? "text-red-600" : "text-black"
-                }`}
-                onClick={() => handleLanguageChange("en")}
-              >
-                {t('NavBarLandingPage.English')}
-              </li>
-              <li
-                className={`px-4 py-2 cursor-pointer ${
-                  i18n.language === "fr" ? "text-red-600" : "text-black"
-                }`}
-                onClick={() => handleLanguageChange("fr")}
-              >
-                {t('NavBarLandingPage.French')}
-              </li>
-            </ul>
+            <div className="self-stretch flex flex-row items-start justify-start">
+              <div className="flex-1 rounded bg-whitesmoke flex flex-col items-start justify-start pt-[17px] px-0 pb-4 gap-3">
+                <div
+                  className="self-stretch flex flex-row items-start justify-start py-0 px-[26px] gap-1.5 cursor-pointer"
+                  onClick={() => handleLanguageChange("en")}
+                >
+                  <img
+                    className="h-6 w-6 relative overflow-hidden shrink-0 min-h-[24px]"
+                    alt="English"
+                    src={
+                      i18n.language === "en"
+                        ? "/radio-button-checked-24dp-e8eaed-fill0-wght300-grad0-opsz24-1.svg"
+                        : "/radio-button-unchecked-24dp-e8eaed-fill0-wght300-grad0-opsz24-1.svg"
+                    }
+                  />
+                  <div className="relative leading-[120%] inline-block min-w-[69px] mq450:text-base mq450:leading-[19px]">
+                    {t('NavBarLandingPage.English')}
+                  </div>
+                </div>
+                <div
+                  className="self-stretch flex flex-row items-start justify-start py-0 px-[27px] gap-[7px] cursor-pointer"
+                  onClick={() => handleLanguageChange("fr")}
+                >
+                  <img
+                    className="h-6 w-6 relative overflow-hidden shrink-0 min-h-[24px]"
+                    alt="French"
+                    src={
+                      i18n.language === "fr"
+                        ? "/radio-button-checked-24dp-e8eaed-fill0-wght300-grad0-opsz24-1.svg"
+                        : "/radio-button-unchecked-24dp-e8eaed-fill0-wght300-grad0-opsz24-1.svg"
+                    }
+                  />
+                  <div className="relative leading-[120%] inline-block min-w-[65px] mq450:text-base mq450:leading-[19px]">
+                    {t('NavBarLandingPage.French')}
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         {/* For Restaurants Section */}
@@ -134,6 +155,7 @@ const NavBarLandingPage: NextPage<NavBarLandingPageType> = ({
 };
 
 export default NavBarLandingPage;
+
 
 
 

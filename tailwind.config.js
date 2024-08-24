@@ -9,6 +9,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      spacing: {
+        '1': '100px'
+      },
       colors: {
         "whites-300": "#fcfbfa",
         "whites-400": "#e6e4d5",

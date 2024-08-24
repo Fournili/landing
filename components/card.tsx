@@ -30,7 +30,7 @@ const Card: NextPage<CardType> = ({
         <h1 className="m-0 w-[232px] relative text-inherit leading-[120%] font-medium font-inherit inline-block mq1025:text-13xl mq1025:leading-[38px] mq450:text-5xl mq450:leading-[29px]">
           {weConnect}
         </h1>
-        <div className="self-stretch relative text-5xl leading-[120%] mq450:text-lgi mq450:leading-[23px]">
+        <div className="self-stretch relative text-5xl font-medium  leading-[120%] mq450:text-lgi mq450:leading-[23px]">
           {weBringRestaurantsAndSupp}
         </div>
       </div>

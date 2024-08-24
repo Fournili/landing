@@ -49,83 +49,99 @@ export default function FAQs() {
         },
       }}
     >
-      <AccordionItem
-        key="1"
-        aria-label="Accordion 1"
-        indicator=" "
-        title={
-          <div style={{ display: "flex", justifyContent: "center", alignItems: "center", width: "100%" }}>
-            <span style={{ fontSize: "24px", fontWeight: "bold", textAlign: "center" }}>
-              {t('FAQs.Do my suppliers need to be on Fournili?')}
-            </span>
-            <span style={{ fontSize: "24px", fontWeight: "bold", marginLeft: "auto" }}>
-              {expanded === "1" ? "-" : "+"}
-            </span>
-          </div>
-        }
-        className="custom-accordion-item "
-        onClick={() => handleToggle("1")}
-      >
-        <div style={{ fontSize: "20px", textAlign: "center" }}>{t('FAQs.answer1')}</div>
-      </AccordionItem>
-      <AccordionItem
-        key="2"
-        aria-label="Accordion 2"
-        indicator=" "
-        title={
-          <div style={{ display: "flex", justifyContent: "center", alignItems: "center", width: "100%" }}>
-            <span style={{ fontSize: "24px", fontWeight: "bold", textAlign: "center" }}>
-              {t('FAQs.How much does Fournili cost?')}
-            </span>
-            <span style={{ fontSize: "24px", fontWeight: "bold", marginLeft: "auto" }}>
-              {expanded === "2" ? "-" : "+"}
-            </span>
-          </div>
-        }
-        className="custom-accordion-item remove-grey-box"
-        onClick={() => handleToggle("2")}
-      >
-        <div style={{ fontSize: "20px", textAlign: "center" }}>{t('FAQs.answer2')}</div>
-      </AccordionItem>
-      <AccordionItem
-        key="3"
-        aria-label="Accordion 3"
-        indicator=" "
-        title={
-          <div style={{ display: "flex", justifyContent: "center", alignItems: "center", width: "100%" }}>
-            <span style={{ fontSize: "24px", fontWeight: "bold", textAlign: "center" }}>
-              {t('FAQs.What is Fournili?')}
-            </span>
-            <span style={{ fontSize: "24px", fontWeight: "bold", marginLeft: "auto" }}>
-              {expanded === "3" ? "-" : "+"}
-            </span>
-          </div>
-        }
-        className="custom-accordion-item"
-        onClick={() => handleToggle("3")}
-      >
-        <div style={{ fontSize: "20px", textAlign: "center" }}>{t('FAQs.answer3')}</div>
-      </AccordionItem>
-      <AccordionItem
-        key="4"
-        aria-label="Accordion 4"
-        indicator=" "
-        title={
-          <div style={{ display: "flex", justifyContent: "center", alignItems: "center", width: "100%" }}>
-            <span style={{ fontSize: "24px", fontWeight: "bold", textAlign: "center" }}>
-              {t('FAQs.Who is Fournili for?')}
-            </span>
-            <span style={{ fontSize: "24px", fontWeight: "bold", marginLeft: "auto" }}>
-              {expanded === "4" ? "-" : "+"}
-            </span>
-          </div>
-        }
-        className="custom-accordion-item"
-        onClick={() => handleToggle("4")}
-      >
-        <div style={{ fontSize: "20px", textAlign: "center" }}>{t('FAQs.answer4')}</div>
-      </AccordionItem>
+<AccordionItem
+  key="1"
+  aria-label="Accordion 1"
+  indicator=" "
+  title={
+    <div style={{ display: "flex", justifyContent: "center",  alignItems: "center", width: "100%",fontFamily: 'Circular Std'  }}>
+      <span style={{ fontSize: "24px",  fontWeight: "bold",  textAlign: "center",fontFamily: 'Circular Std'  }}>
+        {t('FAQs.Do my suppliers need to be on Fournili?')}
+      </span>
+      <span style={{ fontSize: "24px", fontWeight: "bold", marginLeft: "auto" }}>
+        {expanded === "1" ? "-" : "+"}
+      </span>
+    </div>
+  }
+  className="custom-accordion-item"
+  style={{ marginTop: "-25px", marginBottom: "-25px",fontFamily: 'Circular Std'  }}
+  onClick={() => handleToggle("1")}
+>
+  <div style={{ 
+    marginTop: "-40px", fontSize: "20px", textAlign: "center",fontFamily: 'Circular Std' }}>
+    {t('FAQs.answer1')}
+  </div>
+</AccordionItem>
+
+<AccordionItem
+  key="2"
+  aria-label="Accordion 2"
+  indicator=" "
+  title={
+    <div style={{ display: "flex", justifyContent: "center", alignItems: "center", width: "100%",fontFamily: 'Circular Std'}}>
+      <span style={{ fontSize: "24px", fontWeight: "bold", textAlign: "center", fontFamily: 'Circular Std'}}>
+        {t('FAQs.How much does Fournili cost?')}
+      </span>
+      <span style={{ fontSize: "24px", fontWeight: "bold", marginLeft: "auto"}}>
+        {expanded === "2" ? "-" : "+"}
+      </span>
+    </div>
+  }
+  className="custom-accordion-item "
+  style={{ marginTop: "-25px", marginBottom: "-25px",fontFamily: 'Circular Std'}}
+  onClick={() => handleToggle("2")}
+>
+  <div style={{ marginTop: "-40px", fontSize: "20px", textAlign: "center",fontFamily: 'Circular Std'}}>
+    {t('FAQs.answer2')}
+  </div>
+</AccordionItem>
+
+<AccordionItem
+  key="3"
+  aria-label="Accordion 3"
+  indicator=" "
+  title={
+    <div style={{ display: "flex", justifyContent: "center", alignItems: "center", width: "100%",fontFamily: 'Circular Std'}}>
+      <span style={{ fontSize: "24px", fontWeight: "bold", textAlign: "center",fontFamily: 'Circular Std'}}>
+        {t('FAQs.What is Fournili?')}
+      </span>
+      <span style={{ fontSize: "24px", fontWeight: "bold", marginLeft: "auto",}}>
+        {expanded === "3" ? "-" : "+"}
+      </span>
+    </div>
+  }
+  className="custom-accordion-item"
+  style={{ marginTop: "-25px", marginBottom: "-25px",fontFamily: 'Circular Std'}}
+  onClick={() => handleToggle("3")}
+>
+  <div style={{ marginTop: "-40px", fontSize: "20px", textAlign: "center",fontFamily: 'Circular Std'}}>
+    {t('FAQs.answer3')}
+  </div>
+</AccordionItem>
+
+<AccordionItem
+  key="4"
+  aria-label="Accordion 4"
+  indicator=" "
+  title={
+    <div style={{ 
+      display: "flex", justifyContent: "center", alignItems: "center", width: "100%",fontFamily: 'Circular Std'}}>
+      <span style={{  fontSize: "24px",  fontWeight: "bold",  textAlign: "center", fontFamily: 'Circular Std'}}>
+        {t('FAQs.Who is Fournili for?')}
+      </span>
+      <span style={{ fontSize: "24px",  fontWeight: "bold",  marginLeft: "auto",fontFamily: 'Circular Std'}}>
+        {expanded === "4" ? "-" : "+"}
+      </span>
+    </div>
+  }
+  className="custom-accordion-item"
+  style={{ marginTop: "-25px", marginBottom: "-25px",fontFamily: 'Circular Std'}}
+  onClick={() => handleToggle("4")}
+>
+  <div style={{ marginTop: "-40px", fontSize: "20px", textAlign: "center",fontFamily: 'Circular Std'}}>
+    {t('FAQs.answer4')}
+  </div>
+</AccordionItem>
     </Accordion>
   );
 }
-

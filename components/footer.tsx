@@ -82,15 +82,24 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                 {t('Footer.Contact Us')}
               </div>
               <div className="self-stretch flex flex-col items-start justify-start gap-[8px] text-xl text-greys-300">
+              {/* adress section hidden until we can get an actual address 
                 <div className="relative leading-[120%] font-medium mq450:text-base mq450:leading-[19px]">
                   <p className="m-0">{t('Footer.Company Address')}</p>
                   <p className="m-0">{t('Footer.Location')}</p>
-                </div>
-                <div className="self-stretch relative leading-[120%] font-medium whitespace-nowrap mq450:text-base mq450:leading-[19px]">
-                  questions@fournili.com
-                </div>
+                </div> 
+              */}
+<div className="self-stretch relative leading-[120%] font-medium whitespace-nowrap mq450:text-base mq450:leading-[19px]">
+  <Link 
+    href="mailto:hello@fournili.co" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="text-inherit hover:underline"
+  >
+    hello@fournili.co
+  </Link>
+</div>
                 <div className="relative leading-[120%] font-medium mq450:text-base mq450:leading-[19px]">
-                  +213 (21) 345 248
+                  +213 558 501 857
                 </div>
               </div>
             </div>

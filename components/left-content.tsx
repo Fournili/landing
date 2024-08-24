@@ -18,10 +18,10 @@ const LeftContent: NextPage<LeftContentType> = ({
       className={`w-[528px] flex flex-col items-start justify-start py-5 px-0 box-border gap-[48px] min-w-[528px] max-w-full text-left text-21xl text-gray-300 font-body mq750:gap-[24px] mq750:min-w-full mq1125:flex-1 ${className}`}
     >
       <div className="self-stretch flex flex-col items-start justify-start gap-[24px] max-w-full">
-        <h1 className="m-0 w-[416px] relative text-inherit leading-[120%] font-medium font-inherit inline-block max-w-full mq1025:text-13xl mq1025:leading-[38px] mq450:text-5xl mq450:leading-[29px]">
+        <h1 className="font-h3 m-0 w-[416px] relative text-inherit leading-[120%] font-medium font-inherit inline-block max-w-full mq1025:text-13xl mq1025:leading-[38px] mq450:text-5xl mq450:leading-[29px]">
           {service}
         </h1>
-        <div className="self-stretch h-[145px] relative text-5xl leading-[120%] inline-block mq450:text-lgi mq450:leading-[23px]">
+        <div className="font-h6 self-stretch h-[145px] text-[1.5rem] font-medium relative leading-[120%] inline-block mq450:text-lgi mq450:leading-[23px]">
           {serviceSubheading}
         </div>
       </div>

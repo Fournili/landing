@@ -12,7 +12,7 @@ const HeroSection: NextPage<HeroSectionType> = ({ className = "" }) => {
 
   return (
     <section
-      className={`self-stretch h-screen flex flex-row items-start justify-start py-[102px] px-[63px] box-border bg-cover bg-no-repeat bg-center max-w-full text-left text-45xl text-whites-300 font-body ${className}`}
+      className={`self-stretch h-[75vh] flex flex-row items-start justify-start py-[102px] px-[63px] box-border bg-cover bg-no-repeat bg-center max-w-full text-left text-45xl text-whites-300 font-body ${className}`}
       style={{
         backgroundImage: "url('/hero-section@2.5x.webp')",
       }}
