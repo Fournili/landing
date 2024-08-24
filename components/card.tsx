@@ -21,7 +21,7 @@ const Card: NextPage<CardType> = ({
       <Image
         className="self-stretch h-[361px] relative rounded-lg max-w-full overflow-hidden shrink-0 object-cover"
         loading="lazy"
-        alt={weConnect}
+        alt={weConnect || "Default alt text"}
         src={image || ""}
         width={600}
         height={361}
