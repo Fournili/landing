@@ -79,6 +79,17 @@ module.exports = {
       "32xl": "51px",
       inherit: "inherit",
     },
+    fontWeight: {
+      thin: '100',
+      extralight: '200',
+      light: '300',
+      normal: '400',
+      medium: '500',
+      semibold: '600',
+      bold: '700',
+      extrabold: '800',
+      black: '900',
+    },
     screens: {
       mq1125: {
         raw: "screen and (max-width: 1125px)",

@@ -22,12 +22,13 @@ const ForResturantsSection: NextPage<ForResturantsSectionType> = ({
         <span className="text-primary-300">{t("ForRestaurantsSection.foodies")}</span>
         <span>{t("ForRestaurantsSection.out there")}</span>
       </h1>
-      <div className="w-[1088px] flex flex-row items-center justify-between max-w-full gap-[20px] text-left text-21xl mq1125:flex-wrap mq1125:justify-center">
+      <div className="w-[1220px] flex flex-row items-center justify-between max-w-full gap-[30px] text-left text-21xl mq1125:flex-wrap mq1125:justify-center">
         <LeftContent
           service={t("NavBarLandingPage.For Restaurants")}
           serviceSubheading={t("ForRestaurantsSection.We cut your workload in half")}
           vector="/vector-2.svg"
         />
+        <div className="w-[479px] relative rounded-lg max-h-full max-w-full flex-1 mq1125:flex-1">
           <Image
             alt="Restaurants Section Image"
             src="/image-2@2x.png"
@@ -37,6 +38,7 @@ const ForResturantsSection: NextPage<ForResturantsSectionType> = ({
             quality={75} 
             className="rounded-lg object-cover" 
           />
+          </div>
       </div>
     </section>
   );

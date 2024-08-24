@@ -18,12 +18,12 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
           <div className="w-[550px] flex flex-row items-start justify-start gap-[104px] max-w-full mq750:flex-wrap mq750:gap-[52px] mq450:gap-[26px]">
             <Link href="/" passHref>
               <Image
-                className="h-[25px] w-[93px] relative object-contain"
+                className="h-[30px] w-[112px] relative object-contain"
                 loading="lazy"
                 alt="Logo"
                 src="/logo@2x.png"
-                width={93}
-                height={25}
+                width={112}
+                height={30}
                 quality={75}
               />
             </Link>
