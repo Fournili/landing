@@ -66,50 +66,49 @@ const NavBarLandingPage: NextPage<NavBarLandingPageType> = ({
             />
           </div>
           <div
-            className={`absolute top-full left-[-50px] mt-2 w-32 bg-white shadow-md rounded-lg transition-opacity duration-300 ease-in-out ${
-              dropdownVisible ? "opacity-100 visible" : "opacity-0 invisible"
-            }`}
-             // change for spacing : style={{ right: isMobile ? '5px' : 'auto', left: isMobile ? 'auto' : '-50px' }}
-          >
-            <div className="self-stretch flex flex-row items-start justify-start">
-              <div className="flex-1 rounded bg-whitesmoke flex flex-col items-start justify-start pt-[17px] px-0 pb-4 gap-3">
-                <div
-                  className="self-stretch flex flex-row items-start justify-start py-0 px-[26px] gap-1.5 cursor-pointer"
-                  onClick={() => handleLanguageChange("en")}
-                >
-                  <img
-                    className="h-6 w-6 relative overflow-hidden shrink-0 min-h-[24px]"
-                    alt="English"
-                    src={
-                      i18n.language === "en"
-                        ? "/radio-button-checked-24dp-e8eaed-fill0-wght300-grad0-opsz24-1.svg"
-                        : "/radio-button-unchecked-24dp-e8eaed-fill0-wght300-grad0-opsz24-1.svg"
-                    }
-                  />
-                  <div className="relative leading-[120%] inline-block min-w-[69px] mq450:text-base mq450:leading-[19px]">
-                    {t('NavBarLandingPage.English')}
-                  </div>
-                </div>
-                <div
-                  className="self-stretch flex flex-row items-start justify-start py-0 px-[27px] gap-[7px] cursor-pointer"
-                  onClick={() => handleLanguageChange("fr")}
-                >
-                  <img
-                    className="h-6 w-6 relative overflow-hidden shrink-0 min-h-[24px]"
-                    alt="French"
-                    src={
-                      i18n.language === "fr"
-                        ? "/radio-button-checked-24dp-e8eaed-fill0-wght300-grad0-opsz24-1.svg"
-                        : "/radio-button-unchecked-24dp-e8eaed-fill0-wght300-grad0-opsz24-1.svg"
-                    }
-                  />
-                  <div className="relative leading-[120%] inline-block min-w-[65px] mq450:text-base mq450:leading-[19px]">
-                    {t('NavBarLandingPage.French')}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+  className={`absolute top-full right-4 mt-2 w-32 bg-white shadow-md rounded-lg transition-opacity duration-300 ease-in-out${
+    dropdownVisible ? "opacity-100 visible" : "opacity-0 invisible"
+  }`}
+>
+  <div className="self-stretch flex flex-row items-start justify-start">
+    <div className="flex-1 rounded bg-whitesmoke flex flex-col items-start justify-start pt-[17px] px-0 pb-4 gap-3">
+      <div
+        className="self-stretch flex flex-row items-start justify-start py-0 px-[26px] gap-1.5 cursor-pointer"
+        onClick={() => handleLanguageChange("en")}
+      >
+        <img
+          className="h-6 w-6 relative overflow-hidden shrink-0 min-h-[24px]"
+          alt="English"
+          src={
+            i18n.language === "en"
+              ? "/radio-button-checked-24dp-e8eaed-fill0-wght300-grad0-opsz24-1.svg"
+              : "/radio-button-unchecked-24dp-e8eaed-fill0-wght300-grad0-opsz24-1.svg"
+          }
+        />
+        <div className="relative leading-[120%] inline-block min-w-[69px] mq450:text-base mq450:leading-[19px]">
+          {t('NavBarLandingPage.English')}
+        </div>
+      </div>
+      <div
+        className="self-stretch flex flex-row items-start justify-start py-0 px-[27px] gap-[7px] cursor-pointer"
+        onClick={() => handleLanguageChange("fr")}
+      >
+        <img
+          className="h-6 w-6 relative overflow-hidden shrink-0 min-h-[24px]"
+          alt="French"
+          src={
+            i18n.language === "fr"
+              ? "/radio-button-checked-24dp-e8eaed-fill0-wght300-grad0-opsz24-1.svg"
+              : "/radio-button-unchecked-24dp-e8eaed-fill0-wght300-grad0-opsz24-1.svg"
+          }
+        />
+        <div className="relative leading-[120%] inline-block min-w-[65px] mq450:text-base mq450:leading-[19px]">
+          {t('NavBarLandingPage.French')}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
         </div>
         {/* For Restaurants Section */}
         <div
