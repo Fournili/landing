@@ -53,9 +53,49 @@ const NavBarLandingPage: NextPage<NavBarLandingPageType> = ({
         </Link>
       </div>
       <div className="flex items-center">
+        
+        {/* For Restaurants Section */}
+        <div
+          style={{
+            display: isMobile ? 'none' : 'flex',
+          }}
+          className="rounded-lg flex flex-row items-start justify-start p-4 z-[1]"
+        >
+          <ScrollLink
+            to="forrestaurantssection"
+            smooth={true}
+            duration={500}
+            style={{ textDecoration: "none" }}
+            className="cursor-pointer text-black flex flex-row items-center justify-start py-0 px-3"
+          >
+            <div className="relative leading-[120%] font-medium inline-block min-w-[121px] mq450:text-base mq450:leading-[19px]">
+              {t('NavBarLandingPage.For Restaurants')}
+            </div>
+          </ScrollLink>
+        </div>
+        {/* For Suppliers Section */}
+        <div
+          style={{
+            display: isMobile ? 'none' : 'flex',
+          }}
+          className="rounded-lg flex flex-row items-start justify-start p-4 z-[1]"
+        >
+          <ScrollLink
+            to="forsupplierssection"
+            smooth={true}
+            duration={500}
+            style={{ textDecoration: "none" }}
+            className="cursor-pointer text-black flex flex-row items-start justify-start py-0 px-3"
+          >
+            <div className="w-[121px] relative leading-[120%] font-medium inline-block min-w-[121px] mq450:text-base mq450:leading-[19px]">
+              {t('NavBarLandingPage.For Suppliers')}
+            </div>
+          </ScrollLink>
+        </div>
+        {/* lang dropdown Section */}
         <div className="relative">
           <div
-            className="rounded-lg flex flex-row items-start justify-start py-2.5 px-[7px] gap-[7px] z-[1] cursor-pointer"
+            className="rounded-lg flex flex-row items-start justify-start py-2.5 px-[10px] gap-[10px] z-[1] cursor-pointer"
             onClick={toggleDropdown}
           >
             <img
@@ -109,44 +149,6 @@ const NavBarLandingPage: NextPage<NavBarLandingPageType> = ({
     </div>
   </div>
 </div>
-        </div>
-        {/* For Restaurants Section */}
-        <div
-          style={{
-            display: isMobile ? 'none' : 'flex',
-          }}
-          className="rounded-lg flex flex-row items-start justify-start p-4 z-[1]"
-        >
-          <ScrollLink
-            to="forrestaurantssection"
-            smooth={true}
-            duration={500}
-            style={{ textDecoration: "none" }}
-            className="cursor-pointer text-black flex flex-row items-center justify-start py-0 px-3"
-          >
-            <div className="relative leading-[120%] font-medium inline-block min-w-[121px] mq450:text-base mq450:leading-[19px]">
-              {t('NavBarLandingPage.For Restaurants')}
-            </div>
-          </ScrollLink>
-        </div>
-        {/* For Suppliers Section */}
-        <div
-          style={{
-            display: isMobile ? 'none' : 'flex',
-          }}
-          className="rounded-lg flex flex-row items-start justify-start p-4 z-[1]"
-        >
-          <ScrollLink
-            to="forsupplierssection"
-            smooth={true}
-            duration={500}
-            style={{ textDecoration: "none" }}
-            className="cursor-pointer text-black flex flex-row items-start justify-start py-0 px-3"
-          >
-            <div className="w-[121px] relative leading-[120%] font-medium inline-block min-w-[121px] mq450:text-base mq450:leading-[19px]">
-              {t('NavBarLandingPage.For Suppliers')}
-            </div>
-          </ScrollLink>
         </div>
       </div>
     </nav>
