@@ -66,7 +66,7 @@ const NavBarLandingPage: NextPage<NavBarLandingPageType> = ({
             />
           </div>
           <div
-  className={`absolute top-full right-4 mt-2 w-32 bg-white shadow-md rounded-lg transition-opacity duration-300 ease-in-out${
+  className={`absolute top-full right-[-1rem] mt-2 w-32 bg-white shadow-md rounded-lg transition-opacity duration-300 ease-in-out${
     dropdownVisible ? "opacity-100 visible" : "opacity-0 invisible"
   }`}
 >
@@ -154,6 +154,7 @@ const NavBarLandingPage: NextPage<NavBarLandingPageType> = ({
 };
 
 export default NavBarLandingPage;
+
 
 
 
