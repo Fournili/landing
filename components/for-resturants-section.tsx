@@ -22,7 +22,7 @@ const ForResturantsSection: NextPage<ForResturantsSectionType> = ({
         <span className="text-primary-300">{t("ForRestaurantsSection.foodies")}</span>
         <span>{t("ForRestaurantsSection.out there")}</span>
       </h1>
-      <div className="w-[1220px] flex flex-row items-center justify-between max-w-full gap-[30px] text-left text-21xl mq1125:flex-wrap mq1125:justify-center">
+      <div className="w-[1220px] flex flex-row items-center justify-between max-w-full gap-[100px] mq750:gap-[40px] mq450:gap-[20px] text-left text-21xl mq1125:flex-wrap mq1125:justify-center">
         <LeftContent
           service={t("NavBarLandingPage.For Restaurants")}
           serviceSubheading={t("ForRestaurantsSection.We cut your workload in half")}

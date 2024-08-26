@@ -3,13 +3,12 @@ import NavBarLandingPage from "../components/nav-bar-landing-page";
 import Facts from "../components/facts";
 import ForResturantsSection from "../components/for-resturants-section";
 import ForSuppliersSection from "../components/for-suppliers-section";
-import FourniliFAQs from "../components/fournili-f-a-qs";
 import Carousel from "../components/Carousel";
-import Qpp from "../components/newfaq";
 import MobileAdBanner from "../components/mobile-ad-banner";
 import Footer from "../components/footer";
 import HeroSection from "../components/hero-section";
 import FunArt from "../components/funart";
+import FourniliFAQ from "../components/faq";
 
 const FourniliHomepageLandingPag: NextPage = () => {
   return (
@@ -20,7 +19,7 @@ const FourniliHomepageLandingPag: NextPage = () => {
       <Facts />
         <ForResturantsSection />
         <ForSuppliersSection />
-      <FourniliFAQs />
+      <FourniliFAQ/>
       <MobileAdBanner />
       <FunArt />
       <Footer />

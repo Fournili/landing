@@ -15,9 +15,9 @@ const ForSuppliersSection: NextPage<ForSuppliersSectionType> = ({
   return (
     <section
       id="forsupplierssection"
-      className={`self-stretch bg-secondary-100 flex flex-col items-center justify-between py-20 px-5 box-border min-h-[566px] max-w-full mq750:pt-[52px] mq750:pb-[52px] mq750:box-border ${className}`}
+      className={`self-stretch bg-secondary-100 flex flex-col items-center justify-between py-20 px-5 box-border min-h-[500px] max-w-full mq750:pt-[52px] mq750:pb-[52px] mq750:box-border ${className}`}
     >
-      <div className="w-[1088px] flex flex-row items-center justify-between max-w-full gap-[20px] mq1125:flex-wrap">
+      <div className="w-[1220px] flex flex-row items-center justify-between max-w-full gap-[100px] mq450:gap-[20px] mq750:gap-[40px] text-left text-21xl mq1125:flex-wrap mq1125:justify-center">
         <div className="w-[479px] relative rounded-lg max-h-full max-w-full flex-1 mq1125:flex-1">
           <Image
             alt="Suppliers Section Image"
