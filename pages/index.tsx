@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import NavBarLandingPage from "../components/nav-bar-landing-page";
+import NavBarLP from "../components/new-navbar";
 import Facts from "../components/facts";
 import ForResturantsSection from "../components/for-resturants-section";
 import ForSuppliersSection from "../components/for-suppliers-section";
@@ -13,7 +14,7 @@ import FourniliFAQ from "../components/faq";
 const FourniliHomepageLandingPag: NextPage = () => {
   return (
     <div className="w-full relative bg-whites-300 flex flex-col items-end justify-start leading-[normal] tracking-[normal]">
-      <NavBarLandingPage />
+      <NavBarLP />
       <HeroSection />
       <FunArt />
       <Facts />

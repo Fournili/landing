@@ -14,7 +14,7 @@ const MobileAdBanner: NextPage<MobileAdBannerType> = ({ className = "" }) => {
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <section
-        className={`mr-[-1px] self-stretch h-[476px] bg-gray-300 overflow-hidden shrink-0 flex flex-row items-start justify-between pt-[72px] pb-[76px] pr-[60px] pl-[59px] box-border relative gap-[20px] max-w-full text-left text-3xs text-white font-body mq750:pt-[31px] mq750:pb-8 mq750:pr-[30px] mq750:pl-[29px] mq750:box-border mq1025:pt-[47px] mq1025:pb-[49px] mq1025:box-border mq450:h-auto ${className}`}
+        className={`mr-[-1px] self-stretch h-[476px] bg-gray-300 overflow-hidden shrink-0 flex flex-row items-start justify-between pt-[72px] pb-[76px] pr-[60px] pl-[59px] box-border relative gap-[20px] max-w-full text-left text-3xs text-white font-body mq750:pt-[31px] mq750:pb-8 mq750:pr-[30px] mq750:pl-[29px] mq750:box-border mq1025:pt-[47px] mq1025:pb-[49px] mq1025:box-border mq1025:hidden ${className}`}
       >
         <img
           className="h-[1299.6px] w-[1200.7px] absolute !m-[0] top-[-520.6px] right-[-274.5px] overflow-hidden shrink-0 object-contain"

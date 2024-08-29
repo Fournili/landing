@@ -74,6 +74,42 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                   </div>
                 </div>
               </div>
+               {/* Follow Us Section */}
+               <div className="w-28 flex flex-col items-start justify-start gap-[16px] min-w-[112px] mq450:flex-1">
+                <div className="relative leading-[29px] font-medium inline-block min-w-[68px] mq450:text-lgi mq450:leading-[23px]">
+                  {t('Footer.Follow')}
+                </div>
+                <div className="self-stretch flex flex-row items-center justify-start gap-[16px] text-xl text-greys-300">
+                  <Link href="https://www.linkedin.com/company/fournili/posts" target="_blank" rel="noopener noreferrer">
+                    <Image
+                      src="/icon-linkedin.svg"
+                      alt=""
+                      width={24}
+                      height={24}
+                      className="hover:opacity-75 transition-opacity duration-200"
+                    />
+                  </Link>
+                  <Link href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                    <Image
+                      src="/icon-instagram.svg"
+                      alt=""
+                      width={24}
+                      height={24}
+                      className="hover:opacity-75 transition-opacity duration-200"
+                    />
+                  </Link>
+                  <Link href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                    <Image
+                      src="/icon-facebook.svg"
+                      alt=""
+                      width={24}
+                      height={24}
+                      className="hover:opacity-75 transition-opacity duration-200"
+                    />
+                  </Link>
+                </div>
+              </div>
+              {/* End of Follow Us Section */}
             </div>
           </div>
           <div className="w-[216px] flex flex-col items-start justify-center gap-[40px]">

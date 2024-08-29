@@ -22,7 +22,7 @@ const Facts: NextPage<FactsType> = ({ className = "" }) => {
       </div>
       <div className="self-stretch grid flex-row items-start justify-start gap-[32px] max-w-full grid-cols-[repeat(3,_minmax(312px,_1fr))] text-left text-21xl mq750:gap-[16px] mq750:grid-cols-[minmax(312px,_1fr)] mq1125:justify-center mq1125:grid-cols-[repeat(2,_minmax(312px,_541px))]">
         <Card
-          image="/image@2x.png"
+          image="/image@2x.svg"
           weConnect={t('Facts.We connect')}
           weBringRestaurantsAndSupp={t('Facts.We bring restaurants and suppliers together so')}
         />
