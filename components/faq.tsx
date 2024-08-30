@@ -101,15 +101,15 @@ const FourniliFAQ: React.FC = () => {
                 style={{ 
                   padding: '0 0 12px 0', 
                   flexGrow: 1, 
-                  fontFamily: 'Poppins, sans-serif',  // Updated font
-                  fontWeight: '300',  // Light font weight
+                  fontFamily: 'Poppins, sans-serif',  
+                  fontWeight: '300',  
                 }}>
                 <Typography style={{ 
                   color: 'black', 
-                  textAlign: 'left',  // Align text to the left
+                  textAlign: 'left',  
                   fontSize: '20px', 
-                  fontWeight: '300',  // Light font weight
-                  fontFamily: 'Poppins, sans-serif',  // Updated font
+                  fontWeight: '300',  
+                  fontFamily: 'Poppins, sans-serif',  
                 }}>
                   {item.answer}
                 </Typography>

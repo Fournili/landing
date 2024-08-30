@@ -6,6 +6,7 @@ import ForResturantsSection from "../components/for-resturants-section";
 import ForSuppliersSection from "../components/for-suppliers-section";
 import Carousel from "../components/Carousel";
 import MobileAdBanner from "../components/mobile-ad-banner";
+import MobileBanner from "../components/mobile-ad-banner-mobile";
 import Footer from "../components/footer";
 import HeroSection from "../components/hero-section";
 import FunArt from "../components/funart";
@@ -22,6 +23,7 @@ const FourniliHomepageLandingPag: NextPage = () => {
         <ForSuppliersSection />
       <FourniliFAQ/>
       <MobileAdBanner />
+      <MobileBanner />
       <FunArt />
       <Footer />
     </div>

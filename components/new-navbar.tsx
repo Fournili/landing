@@ -9,9 +9,7 @@ export type NavBarLPType = {
   className?: string;
 };
 
-const NavBarLP: NextPage<NavBarLPType> = ({
-  className = "",
-}) => {
+const NavBarLP: NextPage<NavBarLPType> = ({ className = "" }) => {
   const { t, i18n } = useTranslation();
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -19,6 +17,14 @@ const NavBarLP: NextPage<NavBarLPType> = ({
   const handleLanguageChange = (lang: string) => {
     i18n.changeLanguage(lang);
     setDropdownVisible(false);
+
+    if (lang === "ar") {
+      document.documentElement.setAttribute("dir", "rtl");
+      document.documentElement.classList.add("rtl");
+    } else {
+      document.documentElement.setAttribute("dir", "ltr");
+      document.documentElement.classList.remove("rtl");
+    }
   };
 
   const toggleDropdown = () => {
@@ -30,7 +36,7 @@ const NavBarLP: NextPage<NavBarLPType> = ({
       setIsMobile(window.innerWidth < 640);
     };
 
-    handleResize(); 
+    handleResize();
     window.addEventListener("resize", handleResize);
 
     return () => window.removeEventListener("resize", handleResize);
@@ -48,7 +54,7 @@ const NavBarLP: NextPage<NavBarLPType> = ({
             width={110}
             height={64}
             className="relative object-contain z-[1]"
-            priority={true} 
+            priority={true}
           />
         </Link>
       </div>
@@ -64,14 +70,14 @@ const NavBarLP: NextPage<NavBarLPType> = ({
             to="forrestaurantssection"
             smooth={true}
             duration={500}
-            style={{ textDecoration: "none" }}
             className="cursor-pointer text-black flex flex-row items-center justify-start py-0 px-3"
           >
-            <div className="relative leading-[120%] font-medium inline-block min-w-[121px] mq450:text-base mq450:leading-[19px]">
+            <div className="relative leading-[120%] font-medium inline-block min-w-[121px] mq450:text-base mq450:leading-[19px] hover:underline">
               {t('NavBarLandingPage.For Restaurants')}
             </div>
           </ScrollLink>
         </div>
+
         {/* For Suppliers Section */}
         <div
           style={{
@@ -83,14 +89,14 @@ const NavBarLP: NextPage<NavBarLPType> = ({
             to="forsupplierssection"
             smooth={true}
             duration={500}
-            style={{ textDecoration: "none" }}
             className="cursor-pointer text-black flex flex-row items-start justify-start py-0 px-3"
           >
-            <div className="w-[121px] relative leading-[120%] font-medium inline-block min-w-[121px] mq450:text-base mq450:leading-[19px]">
+            <div className="w-[121px] relative leading-[120%] font-medium inline-block min-w-[121px] mq450:text-base mq450:leading-[19px] hover:underline">
               {t('NavBarLandingPage.For Suppliers')}
             </div>
           </ScrollLink>
         </div>
+
         {/* Language Selector */}
         <div className="relative">
           <div
@@ -112,14 +118,14 @@ const NavBarLP: NextPage<NavBarLPType> = ({
             </div>
           </div>
           <div
-            className={`absolute top-full right-[-1rem] mt-2 w-32 bg-white shadow-md rounded-lg transition-opacity duration-300 ease-in-out${
+            className={`absolute top-full right-[-8px] mt-2 w-32 bg-white shadow-md rounded-lg transition-opacity duration-300 ease-in-out${
               dropdownVisible ? "opacity-100 visible" : "opacity-0 invisible"
             }`}
           >
             <div className="self-stretch flex flex-row items-start justify-start">
               <div className="flex-1 rounded bg-whitesmoke flex flex-col items-start justify-start pt-[17px] px-0 pb-4 gap-3">
                 <div
-                  className="self-stretch flex flex-row items-start justify-start py-0 px-[26px] gap-1.5 cursor-pointer"
+                  className="self-stretch flex flex-row items-start justify-start py-0 px-[15px] gap-1.5 cursor-pointer"
                   onClick={() => handleLanguageChange("en")}
                 >
                   <img
@@ -136,7 +142,7 @@ const NavBarLP: NextPage<NavBarLPType> = ({
                   </div>
                 </div>
                 <div
-                  className="self-stretch flex flex-row items-start justify-start py-0 px-[27px] gap-[7px] cursor-pointer"
+                  className="self-stretch flex flex-row items-start justify-start py-0 px-[15px] gap-[7px] cursor-pointer"
                   onClick={() => handleLanguageChange("fr")}
                 >
                   <img
@@ -152,6 +158,23 @@ const NavBarLP: NextPage<NavBarLPType> = ({
                     {t('NavBarLandingPage.French')}
                   </div>
                 </div>
+                <div
+                  className="self-stretch flex flex-row items-start justify-start py-0 px-[15px] gap-[7px] cursor-pointer"
+                  onClick={() => handleLanguageChange("ar")}
+                >
+                  <img
+                    className="h-6 w-6 relative overflow-hidden shrink-0 min-h-[24px]"
+                    alt="Arabic"
+                    src={
+                      i18n.language === "ar"
+                        ? "/radio-button-checked-24dp-e8eaed-fill0-wght300-grad0-opsz24-1.svg"
+                        : "/radio-button-unchecked-24dp-e8eaed-fill0-wght300-grad0-opsz24-1.svg"
+                    }
+                  />
+                  <div className="relative leading-[120%] inline-block min-w-[65px] mq450:text-base mq450:leading-[19px]">
+                    {t('NavBarLandingPage.Arabic')}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -162,3 +185,4 @@ const NavBarLP: NextPage<NavBarLPType> = ({
 };
 
 export default NavBarLP;
+

@@ -48,9 +48,11 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                       {t('Footer.Suppliers')}
                     </div>
                   </Link>
+                  {/* Help center hidden for now
                   <div className="text-dimgray-100 self-stretch relative leading-[120%] font-medium mq450:text-base mq450:leading-[19px]">
                     {t('Footer.Help Center')}
                   </div>
+                  */}
                 </div>
               </div>
               <div className="flex-1 flex flex-col items-start justify-start gap-[16px] min-w-[99px]">
@@ -58,9 +60,11 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                   {t('Footer.About')}
                 </div>
                 <div className="self-stretch flex flex-col items-start justify-start gap-[16px] text-xl text-greys-300">
+                  {/* About fourbili hidden for now 
                   <div className="text-dimgray-100 relative leading-[120%] font-medium mq450:text-base mq450:leading-[19px]">
                     {t('Footer.About Fournili')}
                   </div>
+                  */}
                   <Link href="/#FAQ">
                     <div className="text-dimgray-100 relative leading-[120%] font-medium inline-block min-w-[49px] mq450:text-base mq450:leading-[19px]">
                       {t('Footer.FAQs')}
@@ -124,21 +128,22 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                   <p className="m-0">{t('Footer.Location')}</p>
                 </div> 
               */}
-<div className="self-stretch relative leading-[120%] font-medium whitespace-nowrap mq450:text-base mq450:leading-[19px]">
-  <Link 
-    href="mailto:hello@fournili.co" 
-    target="_blank" 
-    rel="noopener noreferrer"
-    className="text-inherit hover:underline"
-  >
-    hello@fournili.co
-  </Link>
-</div>
+             <div className="self-stretch relative leading-[120%] font-medium whitespace-nowrap mq450:text-base mq450:leading-[19px]">
+               <Link 
+                 href="mailto:hello@fournili.co" 
+                 target="_blank" 
+                 rel="noopener noreferrer"
+                 className="text-inherit hover:underline"
+             >
+                hello@fournili.co
+              </Link>
+             </div>
                 <div className="relative leading-[120%] font-medium mq450:text-base mq450:leading-[19px]">
                   +213 558 501 857
                 </div>
               </div>
             </div>
+            {/*
             <div className="w-[147px] flex flex-col items-start justify-start gap-[16px]">
               <Image
                 className="self-stretch h-[41px] relative rounded-lg max-w-full overflow-hidden shrink-0"
@@ -157,6 +162,7 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                 quality={75}
               />
             </div>
+            */}
           </div>
         </div>
         <div className="self-stretch box-border flex flex-row items-center justify-start pt-[27px] px-16 pb-[30px] max-w-full text-base text-greys-300 border-t-[2px] border-solid border-greys-200 mq750:pl-8 mq750:pr-8 mq750:box-border">

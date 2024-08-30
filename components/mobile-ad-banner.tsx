@@ -230,32 +230,22 @@ const MobileAdBanner: NextPage<MobileAdBannerType> = ({ className = "" }) => {
         <div className="w-[457px] flex flex-col items-start justify-start gap-[24px] max-w-[calc(100%_-_503px)] shrink-0 text-center text-29xl text-primary-300 mq750:hidden mq1025:max-w-full">
           <div className="self-stretch flex flex-row items-start justify-start py-0 px-1 box-border max-w-full">
             <h1 className="m-0 flex-1 relative text-inherit leading-[120%] font-medium font-inherit inline-block max-w-full z-[1] mq1025:text-19xl mq1025:leading-[46px] mq450:text-10xl mq450:leading-[35px]">
-              <p className="m-0">{t('MobileAdBanner.Run Your Business')}</p>
-              <p className="m-0">{t('MobileAdBanner.On The Go')}</p>
+             <p className="m-0">{t('MobileAdBanner.Run Your Business')}</p>
+             <p className="m-0">{t('MobileAdBanner.On The Go')}</p>
             </h1>
-          </div>
-          <div className="self-stretch flex flex-col items-start justify-start gap-[32px] text-5xl text-gray-300 mq450:gap-[16px]">
-            <div className="self-stretch relative leading-[120%] font-medium z-[1] mq450:text-lgi mq450:leading-[23px]">
-              <p className="m-0">{t('MobileAdBanner.Try our app for free in')}</p>
-              <p className="m-0">{t('MobileAdBanner.any app store')}</p>
-            </div>
-            <div className="self-stretch flex flex-row items-start justify-center py-0 px-5">
-              <div className="w-[147px] flex flex-col items-start justify-start gap-[16px] z-[1]">
-                <img
-                  className="self-stretch h-[41px] relative rounded-lg max-w-full overflow-hidden shrink-0"
-                  loading="lazy"
-                  alt=""
-                  src="/apple-button-contents.svg"
-                />
-                <img
-                  className="self-stretch h-[41px] relative rounded-lg max-w-full overflow-hidden shrink-0"
-                  loading="lazy"
-                  alt=""
-                  src="/google-button-contents.svg"
-                />
-              </div>
-            </div>
-          </div>
+         </div>
+         <div className="self-stretch flex flex-col items-start justify-start gap-[32px] text-5xl text-gray-300 mq450:gap-[16px]">
+          <div className="self-stretch relative leading-[120%] font-medium z-[1] mq450:text-lgi mq450:leading-[23px]">
+           <p className="m-0">{t('MobileAdBanner.Try our app for free in')}</p>
+           <p className="m-0">{t('MobileAdBanner.any app store')}</p>
+         </div>
+        </div>
+        <div className="self-stretch flex flex-row items-start justify-start py-0 px-1 box-border max-w-full">
+         <h1 className="w-full relative text-[3rem] leading-[120%] inline-block font-lato text-center" style={{ color: '#373736' }}>
+          Coming Soon!
+         </h1>
+       </div>
+
         </div>
       </section>
     </LocalizationProvider>
@@ -263,3 +253,22 @@ const MobileAdBanner: NextPage<MobileAdBannerType> = ({ className = "" }) => {
 };
 
 export default MobileAdBanner;
+
+{/* Download buttons replaced by coming soon  
+<div className="self-stretch flex flex-row items-start justify-center py-0 px-5">
+<div className="w-[147px] flex flex-col items-start justify-start gap-[16px] z-[1]">
+  <img
+    className="self-stretch h-[41px] relative rounded-lg max-w-full overflow-hidden shrink-0"
+    loading="lazy"
+    alt=""
+    src="/apple-button-contents.svg"
+  />
+  <img
+    className="self-stretch h-[41px] relative rounded-lg max-w-full overflow-hidden shrink-0"
+    loading="lazy"
+    alt=""
+    src="/google-button-contents.svg"
+  />
+</div>
+</div>
+*/}

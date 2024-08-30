@@ -5,11 +5,13 @@ import { ThemeProvider, createTheme } from "@mui/material";
 import CssBaseline from "@mui/material/CssBaseline";
 import { I18nextProvider } from 'react-i18next';
 import i18n from '../i18n';
+import Script from 'next/script';  // Import Script from Next.js
 
 import "./global.css";
 
 export default function MyApp(props: AppProps) {
   const { Component, pageProps } = props;
+
   useEffect(() => {
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector("#jss-server-side");
@@ -30,8 +32,22 @@ export default function MyApp(props: AppProps) {
         />
         <link rel="icon" href="favicon.ico" />
       </Head>
+
+      {/* Google Analytics Script */}
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX`}
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-XXXXXXXXXX');
+        `}
+      </Script>
+
       <ThemeProvider theme={muiTheme}>
-        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
         <I18nextProvider i18n={i18n}>
           <Component {...pageProps} />
