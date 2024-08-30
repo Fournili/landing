@@ -86,7 +86,7 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                       alt=""
                       width={24}
                       height={24}
-                      className="hover:opacity-75 transition-opacity duration-200"
+                      className="hover:brightness-50 transition-opacity duration-200"
                     />
                   </Link>
                   <Link href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
@@ -95,7 +95,7 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                       alt=""
                       width={24}
                       height={24}
-                      className="hover:opacity-75 transition-opacity duration-200"
+                      className="hover:brightness-50 transition-opacity duration-200"
                     />
                   </Link>
                   <Link href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
@@ -104,7 +104,7 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                       alt=""
                       width={24}
                       height={24}
-                      className="hover:opacity-75 transition-opacity duration-200"
+                      className="hover:brightness-50 transition-opacity duration-200"
                     />
                   </Link>
                 </div>

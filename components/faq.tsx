@@ -65,7 +65,6 @@ const FourniliFAQ: React.FC = () => {
               style={{ 
                 backgroundColor: 'white', 
                 boxShadow: 'none',        
-
                 fontFamily: 'Circular Std, sans-serif', 
               }}
             >
@@ -102,15 +101,15 @@ const FourniliFAQ: React.FC = () => {
                 style={{ 
                   padding: '0 0 12px 0', 
                   flexGrow: 1, 
-                  fontWeight: 'normal', 
-                  fontFamily: 'Circular Std, sans-serif', 
+                  fontFamily: 'Poppins, sans-serif',  // Updated font
+                  fontWeight: '300',  // Light font weight
                 }}>
                 <Typography style={{ 
                   color: 'black', 
-                  textAlign: 'center', 
+                  textAlign: 'left',  // Align text to the left
                   fontSize: '20px', 
-                  fontWeight: '300', 
-                  fontFamily: 'Circular Std, sans-serif', 
+                  fontWeight: '300',  // Light font weight
+                  fontFamily: 'Poppins, sans-serif',  // Updated font
                 }}>
                   {item.answer}
                 </Typography>
@@ -124,6 +123,8 @@ const FourniliFAQ: React.FC = () => {
 };
 
 export default FourniliFAQ;
+
+
 
 
 
