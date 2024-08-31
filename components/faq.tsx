@@ -12,16 +12,17 @@ const CustomAccordionSummary = styled(AccordionSummary)(({ theme }) => ({
   '& .MuiAccordionSummary-expandIconWrapper': {
     transform: 'rotate(0deg)',
     transition: 'transform 0.2s',
-    fontSize: '24px', 
+    fontSize: '24px',
   },
   '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
-    transform: 'rotate(45deg)', 
+    transform: 'rotate(45deg)',
   },
 }));
 
 const FourniliFAQ: React.FC = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [expanded, setExpanded] = useState<string | false>(false);
+  const isArabic = i18n.language === 'ar';
 
   const handleChange = (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
     setExpanded(isExpanded ? panel : false);
@@ -52,7 +53,7 @@ const FourniliFAQ: React.FC = () => {
         {/* Title */}
         <Typography variant="h4" className="leading-[58px] font-medium font-inherit inline-block mq1025:text-19xl mq1025:leading-[46px] mq450:text-10xl mq450:leading-[35px]" 
         style={{ marginBottom: '24px', fontFamily: 'Circular Std, sans-serif', }}
-          >
+        >
           FAQs
         </Typography>
 
@@ -65,7 +66,7 @@ const FourniliFAQ: React.FC = () => {
               style={{ 
                 backgroundColor: 'white', 
                 boxShadow: 'none',        
-                fontFamily: 'Circular Std, sans-serif', 
+                fontFamily: isArabic ? 'NotoKufiArabic' : 'Circular Std',
               }}
             >
               <CustomAccordionSummary
@@ -92,7 +93,7 @@ const FourniliFAQ: React.FC = () => {
                   fontWeight: '500', 
                   fontSize: '24px', 
                   padding: '12px 0', 
-                  fontFamily: 'Circular Std, sans-serif', 
+                  fontFamily: isArabic ? 'NotoKufiArabic' : 'Circular Std',
                 }}>
                   {item.question}
                 </Typography>
@@ -101,15 +102,16 @@ const FourniliFAQ: React.FC = () => {
                 style={{ 
                   padding: '0 0 12px 0', 
                   flexGrow: 1, 
-                  fontFamily: 'Poppins, sans-serif',  
+                  fontFamily: isArabic ? 'NotoKufiArabic' : 'Poppins, sans-serif',   
                   fontWeight: '300',  
+                  direction: i18n.language === 'ar' ? 'rtl' : 'ltr',  
+                  textAlign: i18n.language === 'ar' ? 'right' : 'left',  
                 }}>
                 <Typography style={{ 
                   color: 'black', 
-                  textAlign: 'left',  
                   fontSize: '20px', 
                   fontWeight: '300',  
-                  fontFamily: 'Poppins, sans-serif',  
+                  fontFamily: isArabic ? 'NotoKufiArabic' : 'Poppins, sans-serif',  
                 }}>
                   {item.answer}
                 </Typography>
@@ -123,6 +125,7 @@ const FourniliFAQ: React.FC = () => {
 };
 
 export default FourniliFAQ;
+
 
 
 

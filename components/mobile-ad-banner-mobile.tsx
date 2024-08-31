@@ -8,11 +8,15 @@ export type MobileBannerType = {
 
 const MobileBanner: NextPage<MobileBannerType> = ({ className = "" }) => {
   const [screenContentTwoValue, setScreenContentTwoValue] = useState(null);
-  const { t } = useTranslation();
+  const { t,i18n} = useTranslation();
+  const isArabic = i18n.language === 'ar';
 
   return (
     <section
       className={`mq750:flex self-stretch h-[476px] bg-white flex items-center justify-center px-[20px] box-border text-center text-29xl text-primary-300 font-body ${className} mq750:block hidden`}
+      style={{
+        fontFamily: isArabic ? 'NotoKufiArabic' : 'Circular Std',
+      }}
     >
       <div className="w-[457px] flex flex-col items-start justify-start gap-[24px] max-w-[calc(100%_-_503px)] shrink-0 text-center text-29xl text-primary-300  mq1025:max-w-full">
         <div className="self-stretch flex flex-row items-start justify-start py-0 px-1 box-border max-w-full">
@@ -29,7 +33,7 @@ const MobileBanner: NextPage<MobileBannerType> = ({ className = "" }) => {
         </div>
         <div className="self-stretch flex flex-row items-start justify-start py-0 px-1 box-border max-w-full">
           <h1 className="w-full relative text-[3rem] leading-[120%] inline-block font-lato text-center" style={{ color: '#373736' }}>
-            Coming Soon!
+            Coming Soon !
           </h1>
         </div>
       </div>

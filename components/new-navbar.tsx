@@ -10,7 +10,8 @@ export type NavBarLPType = {
 };
 
 const NavBarLP: NextPage<NavBarLPType> = ({ className = "" }) => {
-  const { t, i18n } = useTranslation();
+  const { t,i18n} = useTranslation();
+  const isArabic = i18n.language === 'ar';
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -45,6 +46,9 @@ const NavBarLP: NextPage<NavBarLPType> = ({ className = "" }) => {
   return (
     <nav
       className={`self-stretch flex flex-row font-body items-center justify-between py-2 px-4 sticky top-0 z-10 w-full bg-[#e6e4d5] shadow-md ${className}`}
+      style={{
+        fontFamily: isArabic ? 'NotoKufiArabic' : 'Circular Std',
+      }}
     >
       <div className="flex items-center">
         <Link href="/" passHref>

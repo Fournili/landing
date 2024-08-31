@@ -8,10 +8,14 @@ export type FooterType = {
 };
 
 const Footer: NextPage<FooterType> = ({ className = "" }) => {
-  const { t } = useTranslation();
+  const { t,i18n} = useTranslation();
+  const isArabic = i18n.language === 'ar';
   return (
     <footer
       className={`self-stretch bg-whites-400 flex flex-row items-start justify-start pt-0 px-0 pb-1 box-border max-w-full text-left text-5xl text-gray-300 font-body ${className}`}
+      style={{
+        fontFamily: isArabic ? 'NotoKufiArabic' : 'Circular Std',
+      }}
     >
       <div className="flex-1 flex flex-col items-start justify-start max-w-full">
         <div className="self-stretch flex flex-row items-start justify-between p-16 box-border max-w-full gap-[20px] mq750:pl-8 mq750:pr-8 mq750:box-border mq1025:flex-wrap mq450:pt-[42px] mq450:pb-[42px] mq450:box-border">

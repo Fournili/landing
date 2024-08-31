@@ -15,6 +15,12 @@
   src: url("/CircularStd-Bold.otf");
   font-weight: 700;
 }
+@font-face {
+  font-family: "NotoKufiArabic";
+  src: url("/NotoKufiArabic.ttf"); 
+  font-weight: 400;
+  font-style: normal;
+}
 
 @tailwind base;
 @tailwind components;

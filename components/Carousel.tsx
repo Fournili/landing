@@ -13,7 +13,8 @@ const Carousel: NextPage<CarouselType> = ({ className = "" }) => {
     return null;
   }
 
-  const { t } = useTranslation();
+  const { t,i18n} = useTranslation();
+  const isArabic = i18n.language === 'ar';
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 
