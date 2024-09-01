@@ -140,7 +140,7 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                     hello@fournili.co
                   </Link>
                 </div>
-                <div className="relative leading-[120%] font-medium mq450:text-base mq450:leading-[19px]" > 
+                <div className="relative leading-[120%] font-medium mq450:text-base mq450:leading-[19px]" style={{ direction: "ltr" }} > 
                   +213 558 501 857
                 </div>
               </div>

@@ -71,7 +71,7 @@ const MobileAd: NextPage<MobileAdType> = ({ className = "" }) => {
                         className="absolute top-[14.6px] left-[156.3px] w-[8.6px] h-[6.1px] z-[5]"
                         loading="lazy"
                         alt=""
-                        src="/frame-4273193161.svg"
+                        src="/frame-427319316.svg"
                       />
                       <div className="absolute top-[15.3px] left-[170.1px] w-[12.2px] h-[4.9px] z-[5]">
                         <div className="absolute top-[0px] left-[0px] w-[10.7px] h-[4.9px]">
@@ -87,7 +87,7 @@ const MobileAd: NextPage<MobileAdType> = ({ className = "" }) => {
                             className="absolute top-[4.7px] left-[45.2px] rounded-[310.35px] w-[8.7px] h-[8.7px]"
                             loading="lazy"
                             alt=""
-                            src="/lens11.svg"
+                            src="/lens1.svg"
                           />
                           <img
                             className="absolute top-[3px] left-[3px] rounded-281xl-8 w-3 h-3 object-contain"

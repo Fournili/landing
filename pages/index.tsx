@@ -1,12 +1,9 @@
 import type { NextPage } from "next";
-import NavBarLandingPage from "../components/nav-bar-landing-page";
 import NavBarLP from "../components/new-navbar";
 import Facts from "../components/facts";
 import ForResturantsSection from "../components/for-resturants-section";
 import ForSuppliersSection from "../components/for-suppliers-section";
 import Carousel from "../components/Carousel";
-import MobileAdBanner from "../components/mobile-ad-banner";
-import MobileAdBannerA from "../components/mobile-ad-banner-arabic";
 import MobileBanner from "../components/mobile-ad-banner-sm";
 import MobileAdSwitcher from "../components/mobile-ad-banner-switcher";
 import Footer from "../components/footer";
