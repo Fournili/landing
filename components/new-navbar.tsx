@@ -10,7 +10,7 @@ export type NavBarLPType = {
 };
 
 const NavBarLP: NextPage<NavBarLPType> = ({ className = "" }) => {
-  const { t,i18n} = useTranslation();
+  const { t, i18n } = useTranslation();
   const isArabic = i18n.language === 'ar';
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -122,9 +122,12 @@ const NavBarLP: NextPage<NavBarLPType> = ({ className = "" }) => {
             </div>
           </div>
           <div
-            className={`absolute top-full right-[-8px] mt-2 w-32 bg-white shadow-md rounded-lg transition-opacity duration-300 ease-in-out${
+            className={`absolute top-full mt-2 w-32 bg-white shadow-md rounded-lg transition-opacity duration-300 ease-in-out${
               dropdownVisible ? "opacity-100 visible" : "opacity-0 invisible"
             }`}
+            style={{
+              right: isArabic ? '-65px' : '-8px',
+            }}
           >
             <div className="self-stretch flex flex-row items-start justify-start">
               <div className="flex-1 rounded bg-whitesmoke flex flex-col items-start justify-start pt-[17px] px-0 pb-4 gap-3">
@@ -142,7 +145,7 @@ const NavBarLP: NextPage<NavBarLPType> = ({ className = "" }) => {
                     }
                   />
                   <div className="relative leading-[120%] inline-block min-w-[69px] mq450:text-base mq450:leading-[19px]">
-                    {t('NavBarLandingPage.English')}
+                    English
                   </div>
                 </div>
                 <div
@@ -159,7 +162,7 @@ const NavBarLP: NextPage<NavBarLPType> = ({ className = "" }) => {
                     }
                   />
                   <div className="relative leading-[120%] inline-block min-w-[65px] mq450:text-base mq450:leading-[19px]">
-                    {t('NavBarLandingPage.French')}
+                    Français
                   </div>
                 </div>
                 <div
@@ -176,7 +179,7 @@ const NavBarLP: NextPage<NavBarLPType> = ({ className = "" }) => {
                     }
                   />
                   <div className="relative leading-[120%] inline-block min-w-[65px] mq450:text-base mq450:leading-[19px]">
-                    {t('NavBarLandingPage.Arabic')}
+                    العربية
                   </div>
                 </div>
               </div>
@@ -189,4 +192,5 @@ const NavBarLP: NextPage<NavBarLPType> = ({ className = "" }) => {
 };
 
 export default NavBarLP;
+
 

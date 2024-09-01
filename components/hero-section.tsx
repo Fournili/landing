@@ -15,7 +15,7 @@ const HeroSection: NextPage<HeroSectionType> = ({ className = "" }) => {
     <section
       className={`self-stretch h-[75vh] flex flex-row items-start justify-start py-[102px] px-[63px] box-border bg-cover bg-no-repeat bg-center max-w-full text-45xl text-whites-300 font-body ${className}`}
       style={{
-        backgroundImage: "url('/hero-section@2.5x.webp')",
+        backgroundImage: isArabic ? "url('/hero-section-ar@2.5x.webp')":"url('/hero-section@2.5x.webp')",
         direction: isArabic ? 'rtl' : 'ltr',
         fontFamily: isArabic ? 'NotoKufiArabic' : 'Circular Std',
       }}

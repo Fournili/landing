@@ -14,18 +14,18 @@ const Card: NextPage<CardType> = ({
   image,
   weConnect,
   weBringRestaurantsAndSupp,
-  
 }) => {
-  const { t,i18n} = useTranslation();
+  const { t, i18n } = useTranslation();
   const isArabic = i18n.language === 'ar';
 
   return (
     <div
-      className={`flex flex-col items-start justify-start py-8 px-0 box-border gap-[40px] max-w-full text-left text-21xl text-gray-300 font-body mq750:pt-[21px] mq750:pb-[21px] mq750:box-border mq450:gap-[20px] ${className}`}
+      className={`flex flex-col items-start justify-start py-8 px-0 box-border gap-[40px] max-w-full text-21xl text-gray-300 font-body mq750:pt-[21px] mq750:pb-[21px] mq750:box-border mq450:gap-[20px] ${className}`}
       style={{
         fontFamily: isArabic ? 'NotoKufiArabic' : 'Circular Std',
+        textAlign: isArabic ? 'right' : 'left',
       }}
-   >
+    >
       <Image
         className="self-stretch h-[361px] relative rounded-lg max-w-full overflow-hidden shrink-0 object-cover"
         loading="lazy"
@@ -34,11 +34,11 @@ const Card: NextPage<CardType> = ({
         width={600}
         height={361}
       />
-      <div className="self-stretch flex flex-col items-center justify-start pt-0 px-0 pb-[21px] gap-[16px]" >
+      <div className="self-stretch flex flex-col items-center justify-start pt-0 px-0 pb-[21px] gap-[16px]">
         <h1 className="m-0 w-[232px] relative text-inherit leading-[120%] font-medium font-inherit inline-block mq1025:text-13xl mq1025:leading-[38px] mq450:text-5xl mq450:leading-[29px]">
           {weConnect}
         </h1>
-        <div className="self-stretch relative text-5xl font-medium  leading-[120%] mq450:text-lgi mq450:leading-[23px]">
+        <div className="self-stretch relative text-5xl font-medium leading-[120%] mq450:text-lgi mq450:leading-[23px]">
           {weBringRestaurantsAndSupp}
         </div>
       </div>

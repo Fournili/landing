@@ -6,7 +6,9 @@ import ForResturantsSection from "../components/for-resturants-section";
 import ForSuppliersSection from "../components/for-suppliers-section";
 import Carousel from "../components/Carousel";
 import MobileAdBanner from "../components/mobile-ad-banner";
-import MobileBanner from "../components/mobile-ad-banner-mobile";
+import MobileAdBannerA from "../components/mobile-ad-banner-arabic";
+import MobileBanner from "../components/mobile-ad-banner-sm";
+import MobileAdSwitcher from "../components/mobile-ad-banner-switcher";
 import Footer from "../components/footer";
 import HeroSection from "../components/hero-section";
 import FunArt from "../components/funart";
@@ -22,7 +24,7 @@ const FourniliHomepageLandingPag: NextPage = () => {
         <ForResturantsSection />
         <ForSuppliersSection />
       <FourniliFAQ/>
-      <MobileAdBanner />
+      <MobileAdSwitcher/>
       <MobileBanner />
       <FunArt />
       <Footer />

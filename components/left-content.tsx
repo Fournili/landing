@@ -16,11 +16,13 @@ const LeftContent: NextPage<LeftContentType> = ({
 }) => {
   const { t, i18n } = useTranslation();
   const isArabic = i18n.language === 'ar';
+
   return (
     <div
-      className={`w-[528px] flex flex-col items-start justify-start py-5 px-0 box-border gap-[48px] min-w-[528px] max-w-full text-left text-21xl text-gray-300 font-body mq750:gap-[24px] mq750:min-w-full mq1125:flex-1 ${className}`}
+      className={`w-[528px] flex flex-col items-start justify-start py-5 px-0 box-border gap-[48px] min-w-[528px] max-w-full text-21xl text-gray-300 font-body mq750:gap-[24px] mq750:min-w-full mq1125:flex-1 ${className}`}
       style={{
         fontFamily: isArabic ? 'NotoKufiArabic' : 'Circular Std',
+        textAlign: isArabic ? 'right' : 'left',
       }}
     >
       <div className="self-stretch flex flex-col items-start justify-start gap-[24px] max-w-full">
@@ -35,7 +37,7 @@ const LeftContent: NextPage<LeftContentType> = ({
         <div className="overflow-hidden hidden flex-col items-start justify-start p-[9px] box-border w-[px] h-[px]">
           <img className="w-[25.7px] h-[25.7px] relative" alt="" src={vector} />
         </div>
-        <b className="relative text-5xl leading-[29px] inline-block font-body text-gray-100 text-left min-w-[129px] whitespace-nowrap mq450:text-lgi mq450:leading-[23px]">
+        <b className="relative text-5xl leading-[29px] inline-block font-body text-gray-100 min-w-[129px] whitespace-nowrap mq450:text-lgi mq450:leading-[23px]">
           Learn More
         </b>
       </button>
@@ -44,3 +46,4 @@ const LeftContent: NextPage<LeftContentType> = ({
 };
 
 export default LeftContent;
+

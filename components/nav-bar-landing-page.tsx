@@ -86,7 +86,7 @@ const NavBarLandingPage: NextPage<NavBarLandingPageType> = ({
           }
         />
         <div className="relative leading-[120%] inline-block min-w-[69px] mq450:text-base mq450:leading-[19px]">
-          {t('NavBarLandingPage.English')}
+          English
         </div>
       </div>
       <div
@@ -103,7 +103,7 @@ const NavBarLandingPage: NextPage<NavBarLandingPageType> = ({
           }
         />
         <div className="relative leading-[120%] inline-block min-w-[65px] mq450:text-base mq450:leading-[19px]">
-          {t('NavBarLandingPage.French')}
+          Français
         </div>
       </div>
     </div>
