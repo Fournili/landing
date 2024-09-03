@@ -64,7 +64,7 @@ const NavBarLP: NextPage<NavBarLPType> = ({ className = "" }) => {
       <div className="flex items-center">
         <Link href="/" passHref>
           <Image
-            src="/plan-de-travail-1-copie-4-2@2x.svg"
+            src="./plan-de-travail-1-copie-4-2@2x.svg"
             alt="Fournili Logo"
             width={110}
             height={64}

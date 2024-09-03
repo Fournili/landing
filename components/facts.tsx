@@ -38,7 +38,7 @@ const Facts: NextPage<FactsType> = ({ className = "" }) => {
           weBringRestaurantsAndSupp={t('Facts.Save tou money, save you time')}
         />
         <Card
-          image="/imageicon@2x.png"
+          image="/image-4@3x.jpg"
           weConnect={t('Facts.We promise')}
           weBringRestaurantsAndSupp={t('Facts.In the food industry, reliability is key')}
         />
