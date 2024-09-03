@@ -39,17 +39,17 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                 </div>
                 <div className="self-stretch flex flex-col items-start justify-start gap-[16px] text-xl text-greys-300">
                   <Link href="/" passHref>
-                    <div className="text-dimgray-100 w-[101px] relative leading-[120%] font-medium inline-block mq450:text-base mq450:leading-[19px]">
+                    <div className="text-dimgray-100 w-[101px] relative leading-[120%] font-medium inline-block mq450:text-base mq450:leading-[19px] hover:underline">
                       {t('Footer.Homepage')}
                     </div>
                   </Link>
                   <Link href="/#forrestaurantssection">
-                    <div className="text-dimgray-100 w-[109px] relative leading-[120%] font-medium inline-block mq450:text-base mq450:leading-[19px]">
+                    <div className="text-dimgray-100 w-[109px] relative leading-[120%] font-medium inline-block mq450:text-base mq450:leading-[19px] hover:underline">
                       {t('Footer.Restaurants')}
                     </div>
                   </Link>
                   <Link href="/#forsupplierssection">
-                    <div className="text-dimgray-100 relative leading-[120%] font-medium inline-block min-w-[86px] mq450:text-base mq450:leading-[19px]">
+                    <div className="text-dimgray-100 relative leading-[120%] font-medium inline-block min-w-[86px] mq450:text-base mq450:leading-[19px] hover:underline">
                       {t('Footer.Suppliers')}
                     </div>
                   </Link>
@@ -69,33 +69,39 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                     {t('Footer.About Fournili')}
                   </div> */}
                   <Link href="/#FAQ">
-                    <div className="text-dimgray-100 relative leading-[120%] font-medium inline-block min-w-[49px] mq450:text-base mq450:leading-[19px]">
+                    <div className="text-dimgray-100 relative leading-[120%] font-medium inline-block min-w-[49px] mq450:text-base mq450:leading-[19px] hover:underline">
                       {t('Footer.FAQs')}
                     </div>
                   </Link>
-                  <div className="text-dimgray-100 self-stretch relative leading-[120%] font-medium mq450:text-base mq450:leading-[19px]">
+                  <Link href="/terms-of-use">
+                  <div className="cursor-pointer text-dimgray-100 relative leading-[120%] font-medium inline-block min-w-[128px] mq450:text-base mq450:leading-[19px] no-underline hover:underline" >
                     {t('Footer.Terms of Service')}
                   </div>
-                  <div className="text-dimgray-100 relative leading-[120%] font-medium inline-block min-w-[128px] mq450:text-base mq450:leading-[19px]">
+                  </Link>
+                  <Link href="/privacy-policy">
+                  <div className="cursor-pointer text-dimgray-100 relative leading-[120%] font-medium inline-block min-w-[128px] mq450:text-base mq450:leading-[19px] no-underline hover:underline" >
                     {t('Footer.Privacy Policy')}
                   </div>
+                  </Link>
+                  
                 </div>
               </div>
               {/* Follow Us Section */}
-              <div className="w-28 flex flex-col items-start justify-start gap-[16px] min-w-[112px] mq450:flex-1">
+               <div className="w-28 flex flex-col items-center justify-start gap-[16px] min-w-[112px] mq450:flex-1">
                 <div className="relative leading-[29px] font-medium inline-block min-w-[68px] mq450:text-lgi mq450:leading-[23px]">
-                  {t('Footer.Follow')}
+                 {t('Footer.Follow')}
                 </div>
-                <div className="self-stretch flex flex-row items-center justify-start gap-[16px] text-xl text-greys-300">
-                  <Link href="https://www.linkedin.com/company/fournili/posts" target="_blank" rel="noopener noreferrer">
-                    <Image
-                      src="/icon-linkedin.svg"
-                      alt=""
-                      width={24}
-                      height={24}
-                      className="hover:brightness-50 transition-opacity duration-200"
-                    />
-                  </Link>
+              <div className="self-stretch flex flex-row items-center justify-center gap-[16px] text-xl text-greys-300">
+               <Link href="https://www.linkedin.com/company/fournili/posts" target="_blank" rel="noopener noreferrer">
+                <Image
+                  src="/icon-linkedin.svg"
+                  alt=""
+                  width={24}
+                  height={24}
+                  className="hover:brightness-50 transition-opacity duration-200"
+                />
+               </Link>
+                  {/* 
                   <Link href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
                     <Image
                       src="/icon-instagram.svg"
@@ -114,8 +120,10 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                       className="hover:brightness-50 transition-opacity duration-200"
                     />
                   </Link>
+                  */}
                 </div>
               </div>
+              
               {/* End of Follow Us Section */}
             </div>
           </div>
@@ -137,7 +145,7 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                     rel="noopener noreferrer"
                     className="text-inherit hover:underline"
                   >
-                    hello@fournili.co
+                    support@fournili.co
                   </Link>
                 </div>
                 <div className="relative leading-[120%] font-medium mq450:text-base mq450:leading-[19px]" style={{ direction: "ltr" }} > 

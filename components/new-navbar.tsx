@@ -18,6 +18,7 @@ const NavBarLP: NextPage<NavBarLPType> = ({ className = "" }) => {
   const handleLanguageChange = (lang: string) => {
     i18n.changeLanguage(lang);
     setDropdownVisible(false);
+    localStorage.setItem('i18nextLng', lang);
 
     if (lang === "ar") {
       document.documentElement.setAttribute("dir", "rtl");
@@ -39,6 +40,10 @@ const NavBarLP: NextPage<NavBarLPType> = ({ className = "" }) => {
 
     handleResize();
     window.addEventListener("resize", handleResize);
+    const savedLanguage = localStorage.getItem('i18nextLng');
+    if (savedLanguage) {
+      handleLanguageChange(savedLanguage);
+    }
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);

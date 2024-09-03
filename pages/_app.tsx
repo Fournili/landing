@@ -5,18 +5,22 @@ import { ThemeProvider, createTheme } from "@mui/material";
 import CssBaseline from "@mui/material/CssBaseline";
 import { I18nextProvider } from 'react-i18next';
 import i18n from '../i18n';
-import Script from 'next/script';  // Import Script from Next.js
+import Script from 'next/script';
 
 import "./global.css";
 
-export default function MyApp(props: AppProps) {
-  const { Component, pageProps } = props;
-
+export default function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector("#jss-server-side");
     if (jssStyles && jssStyles.parentElement) {
       jssStyles.parentElement.removeChild(jssStyles);
+    }
+
+    // Load the saved language preference
+    const savedLanguage = localStorage.getItem('i18nextLng');
+    if (savedLanguage) {
+      i18n.changeLanguage(savedLanguage);
     }
   }, []);
 

@@ -1,5 +1,6 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
+import LanguageDetector from 'i18next-browser-languagedetector';
 import en from './localisation/eng.json';
 import fr from './localisation/fr.json';
 import ar from './localisation/ar.json';
@@ -20,6 +21,10 @@ i18n
     },
     lng: 'en', // Default language
     fallbackLng: 'en', // Fallback language
+    detection: {
+      order: ['localStorage', 'navigator'],
+      caches: ['localStorage']
+    },
     interpolation: {
       escapeValue: false
     }

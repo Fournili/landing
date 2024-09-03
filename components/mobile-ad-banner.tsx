@@ -246,7 +246,7 @@ const MobileAdBanner: NextPage<MobileAdBannerType> = ({ className = "" }) => {
         </div>
         <div className="self-stretch flex flex-row items-start justify-start py-0 px-1 box-border max-w-full">
          <h1 className="w-full relative text-[3rem] leading-[120%] inline-block font-lato text-center" style={{ color: '#373736' }}>
-          Coming Soon!
+          {t('MobileAdBanner.Coming')}
          </h1>
        </div>
 
