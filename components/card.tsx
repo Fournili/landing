@@ -17,6 +17,8 @@ const Card: NextPage<CardType> = ({
 }) => {
   const { t, i18n } = useTranslation();
   const isArabic = i18n.language === 'ar';
+  const isFrench = i18n.language === 'fr';
+  
 
   return (
     <div
@@ -34,8 +36,9 @@ const Card: NextPage<CardType> = ({
         width={600}
         height={361}
       />
-      <div className="self-stretch flex flex-col items-center justify-start pt-0 px-0 pb-[21px] gap-[16px]">
-        <h1 className="m-0 w-[232px] relative text-inherit leading-[120%] font-medium font-inherit inline-block mq1025:text-13xl mq1025:leading-[38px] mq450:text-5xl mq450:leading-[29px]">
+      <div className="self-stretch flex flex-col items-start justify-start pt-0 px-0 pb-[21px] gap-[16px]">
+        <h1 className={`m-0 relative text-inherit leading-[120%] font-medium font-inherit mq1025:text-13xl mq1025:leading-[38px] mq450:text-5xl mq450:leading-[29px] ${isFrench ? 'self-start' : 'self-center'}`} 
+            style={{  whiteSpace: isFrench ? 'nowrap' : 'normal', width: isFrench ? 'auto' : '232px'}}>
           {weConnect}
         </h1>
         <div className="self-stretch relative text-5xl font-medium leading-[120%] mq450:text-lgi mq450:leading-[23px]">

@@ -37,3 +37,17 @@ body {
 .no-underline {
   text-decoration: none;
 }
+
+.text-wrap-fr {
+  white-space: nowrap;
+}
+.text-wrap-ar {
+  white-space: nowrap;
+}
+@media (max-width: 640px) {
+  .text-wrap-fr {
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+}

@@ -12,6 +12,7 @@ export type NavBarLPType = {
 const NavBarLP: NextPage<NavBarLPType> = ({ className = "" }) => {
   const { t, i18n } = useTranslation();
   const isArabic = i18n.language === 'ar';
+  const isFrench = i18n.language === 'fr';
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -27,7 +28,12 @@ const NavBarLP: NextPage<NavBarLPType> = ({ className = "" }) => {
       document.documentElement.setAttribute("dir", "ltr");
       document.documentElement.classList.remove("rtl");
     }
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   };
+
 
   const toggleDropdown = () => {
     setDropdownVisible(!dropdownVisible);
@@ -100,7 +106,7 @@ const NavBarLP: NextPage<NavBarLPType> = ({ className = "" }) => {
             duration={500}
             className="cursor-pointer text-black flex flex-row items-start justify-start py-0 px-3"
           >
-            <div className="w-[121px] relative leading-[120%] font-medium inline-block min-w-[121px] mq450:text-base mq450:leading-[19px] hover:underline">
+            <div className="w-[121px] relative leading-[120%] font-medium inline-block min-w-[121px] mq450:text-base mq450:leading-[19px] hover:underline text-wrap-fr " >
               {t('NavBarLandingPage.For Suppliers')}
             </div>
           </ScrollLink>

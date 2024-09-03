@@ -3,7 +3,7 @@ import Head from 'next/head';
 
 const PrivacyPolicy: React.FC = () => {
   return (
-    <div className="container mx-auto p-4 font-circular">
+    <div className="container mx-auto p-4 font-circular" style={{ direction: "ltr" }} >
       <Head>
         <title>Fournili - Privacy Policy</title>
       </Head>

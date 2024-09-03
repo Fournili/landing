@@ -10,6 +10,7 @@ export type FooterType = {
 const Footer: NextPage<FooterType> = ({ className = "" }) => {
   const { t, i18n } = useTranslation();
   const isArabic = i18n.language === "ar";
+  const isFrench = i18n.language === 'fr';
 
   return (
     <footer
@@ -34,12 +35,12 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
             </Link>
             <div className="flex-1 flex flex-row items-start justify-start gap-[88px] min-w-[229px] max-w-full mq450:flex-wrap mq450:gap-[44px]">
               <div className="w-28 flex flex-col items-start justify-start gap-[16px] min-w-[112px] mq450:flex-1">
-                <div className="relative leading-[29px] font-medium inline-block min-w-[43px] mq450:text-lgi mq450:leading-[23px]">
+                <div className="relative leading-[29px] font-medium inline-block min-w-[50px] mq450:text-lgi mq450:leading-[23px]">
                   {t('Footer.Info')}
                 </div>
                 <div className="self-stretch flex flex-col items-start justify-start gap-[16px] text-xl text-greys-300">
                   <Link href="/" passHref>
-                    <div className="text-dimgray-100 w-[101px] relative leading-[120%] font-medium inline-block mq450:text-base mq450:leading-[19px] hover:underline">
+                    <div className="text-dimgray-100 w-[101px] relative leading-[120%] font-medium inline-block mq450:text-base mq450:leading-[19px] hover:underline text-wrap-fr"style={{ whiteSpace: isArabic ? 'nowrap' : 'normal'}} >
                       {t('Footer.Homepage')}
                     </div>
                   </Link>
@@ -60,7 +61,7 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                 </div>
               </div>
               <div className="flex-1 flex flex-col items-start justify-start gap-[16px] min-w-[99px]">
-                <div className="relative leading-[29px] font-medium inline-block min-w-[68px] mq450:text-lgi mq450:leading-[23px]">
+                <div className="relative leading-[29px] font-medium inline-block min-w-[68px] mq450:text-lgi mq450:leading-[23px] text-wrap-fr "  >
                   {t('Footer.About')}
                 </div>
                 <div className="self-stretch flex flex-col items-start justify-start gap-[16px] text-xl text-greys-300">
@@ -69,17 +70,17 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                     {t('Footer.About Fournili')}
                   </div> */}
                   <Link href="/#FAQ">
-                    <div className="text-dimgray-100 relative leading-[120%] font-medium inline-block min-w-[49px] mq450:text-base mq450:leading-[19px] hover:underline">
+                    <div className="text-dimgray-100 relative leading-[120%] font-medium inline-block min-w-[49px] mq450:text-base mq450:leading-[19px] hover:underline text-wrap-ar">
                       {t('Footer.FAQs')}
                     </div>
                   </Link>
                   <Link href="/terms-of-use">
-                  <div className="cursor-pointer text-dimgray-100 relative leading-[120%] font-medium inline-block min-w-[128px] mq450:text-base mq450:leading-[19px] no-underline hover:underline" >
+                  <div className="cursor-pointer text-dimgray-100 relative leading-[120%] font-medium inline-block min-w-[128px] mq450:text-base mq450:leading-[19px] no-underline hover:underline " style={{ whiteSpace: isArabic ? 'nowrap' : 'normal'}}>
                     {t('Footer.Terms of Service')}
                   </div>
                   </Link>
                   <Link href="/privacy-policy">
-                  <div className="cursor-pointer text-dimgray-100 relative leading-[120%] font-medium inline-block min-w-[128px] mq450:text-base mq450:leading-[19px] no-underline hover:underline" >
+                  <div className="cursor-pointer text-dimgray-100 relative leading-[120%] font-medium inline-block min-w-[128px] mq450:text-base mq450:leading-[19px] no-underline hover:underline" style={{ whiteSpace: isArabic ? 'nowrap' : 'normal'}} >
                     {t('Footer.Privacy Policy')}
                   </div>
                   </Link>
@@ -88,7 +89,7 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
               </div>
               {/* Follow Us Section */}
                <div className="w-28 flex flex-col items-center justify-start gap-[16px] min-w-[112px] mq450:flex-1">
-                <div className="relative leading-[29px] font-medium inline-block min-w-[68px] mq450:text-lgi mq450:leading-[23px]">
+                <div className="relative leading-[29px] font-medium inline-block min-w-[68px] mq450:text-lgi mq450:leading-[23px] text-wrap-fr " >
                  {t('Footer.Follow')}
                 </div>
               <div className="self-stretch flex flex-row items-center justify-center gap-[16px] text-xl text-greys-300">
@@ -129,7 +130,7 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
           </div>
           <div className="w-[216px] flex flex-col items-start justify-center gap-[40px]">
             <div className="self-stretch flex flex-col items-start justify-start gap-[16px]">
-              <div className="w-[123px] relative leading-[29px] font-medium inline-block mq450:text-lgi mq450:leading-[23px]">
+              <div className="w-[123px] relative leading-[29px] font-medium inline-block mq450:text-lgi mq450:leading-[23px] text-wrap-fr " >
                 {t('Footer.Contact Us')}
               </div>
               <div className="self-stretch flex flex-col items-start justify-start gap-[8px] text-xl text-greys-300">

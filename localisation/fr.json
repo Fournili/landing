@@ -1,7 +1,7 @@
 {
     "NavBarLandingPage":{
-        "For Restaurants": "Pour les restaurants",
-        "For Suppliers": "Pour les fournisseurs",
+        "For Restaurants": "Pour Restaurants",
+        "For Suppliers": "Pour Fournisseurs",
         "English": "Anglais",
         "French": "Français",
         "Arabic":"Arabe" 
@@ -12,8 +12,8 @@
         "Get Started": "Commencer"
       },
     "Facts":{
-        "Leave the mess in the kitchen":"Laissez le désordre dans la cuisine.",
-        "We’ll do the rest":"Nous ferons le reste.",
+        "Leave the mess in the kitchen":"Laissez le désordre dans la cuisine",
+        "We’ll do the rest":"Nous ferons le reste",
         "We connect":"Nous connectons.",
         "We bring restaurants and suppliers together so":"Nous réunissons les restaurants et les fournisseurs pour que vous puissiez tout faire en un seul endroit. Discutez avec vos partenaires commerciaux, suivez vos commandes en temps réel et découvrez tout ce qui existe.",
         "We save":"Nous économisons.",
@@ -29,7 +29,7 @@
     "We cut your workload in half": "Nous réduisons votre charge de travail de moitié. Les jours de bourdes sont finis. Commandez en trois clics, contactez les fournisseurs à portée de main et suivez vos articles en route vers vous. Et avons-nous mentionné que c'est gratuit ?"
 },
 "ForSuppliersSection": {
-    "For Suppliers":"Pour les fournisseurs",
+    "For Suppliers":"Pour Fournisseurs",
     "By making the process easier for restaurants":"En facilitant le processus pour les restaurants, nous augmentons le nombre d'articles dans leur panier et de commandes passées. Nous éliminons les tracas afin que vous puissiez augmenter votre chiffre d'affaires et construire une base de clients solide."
 
 },
@@ -48,7 +48,7 @@
     "On The Go":"",
     "Try our app for free in":"Essayez notre application gratuitement dans",
     "any app store":"n'importe quel app store",
-    "Coming":"bientôt disponible"
+    "Coming":"Bientôt Disponible"
 
 },
 "Footer":{

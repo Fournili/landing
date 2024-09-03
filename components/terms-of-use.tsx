@@ -3,7 +3,7 @@ import Head from 'next/head';
 
 const TermsOfService: React.FC = () => {
   return (
-    <div className=" container mx-auto p-4 ">
+    <div className=" container mx-auto p-4 " style={{ direction: "ltr" }} >
       <Head>
         <title>Fournili - Terms of Use</title>
       </Head>

@@ -23,8 +23,7 @@ const HeroSection: NextPage<HeroSectionType> = ({ className = "" }) => {
       <div className="w-[560px] rounded-lg flex flex-col items-start justify-start p-8 box-border gap-[40px] max-w-full mq750:gap-[20px]">
         <div className="self-stretch flex flex-col items-start justify-start gap-[16px] max-w-full">
           <h1
-            className="m-0 w-[465px] relative text-inherit leading-[77px] font-medium font-inherit inline-block max-w-full mq1025:text-32xl mq1025:leading-[61px] mq450:text-19xl mq450:leading-[46px]"
-          >
+            className="m-0 w-[465px] relative text-inherit leading-[77px] font-medium font-inherit inline-block max-w-full mq1025:text-32xl mq1025:leading-[61px] mq450:text-19xl mq450:leading-[46px] text-wrap-fr">
             {t("HeroSection.For The Foodies")}
           </h1>
           <div className="self-stretch relative text-xl leading-[120%] font-medium mq450:text-base mq450:leading-[19px]">
