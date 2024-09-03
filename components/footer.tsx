@@ -141,7 +141,7 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                 </div> */}
                 <div className="self-stretch relative leading-[120%] font-medium whitespace-nowrap mq450:text-base mq450:leading-[19px]">
                   <Link
-                    href="mailto:hello@fournili.co"
+                    href="mailto:support@fournili.co"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-inherit hover:underline"

@@ -15,7 +15,7 @@ const HeroSection: NextPage<HeroSectionType> = ({ className = "" }) => {
     <section
       className={`self-stretch h-[75vh] flex flex-row items-start justify-start py-[102px] px-[63px] box-border bg-cover bg-no-repeat bg-center max-w-full text-45xl text-whites-300 font-body ${className}`}
       style={{
-        backgroundImage: isArabic ? "url('/hero-section-ar@2.5x.webp')":"url('/hero-section@2.5x.webp')",
+        backgroundImage: isArabic ? "url('/hero-section-ar@2.5x.webp')" : "url('/hero-section@2.5x.webp')",
         direction: isArabic ? 'rtl' : 'ltr',
         fontFamily: isArabic ? 'NotoKufiArabic' : 'Circular Std',
       }}
@@ -30,7 +30,7 @@ const HeroSection: NextPage<HeroSectionType> = ({ className = "" }) => {
             {t("HeroSection.one-stop platform")}
           </div>
         </div>
-        <Link href="https://www.linkedin.com/company/fournili/" style={{ textDecoration: 'none' }}>
+        <Link href="https://form.jotform.com/242465571944363" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
           <button
             className="cursor-pointer border-none py-[13.5px] px-6 bg-primary-300 shadow-[0px_2px_2px_rgba(0,_0,_0,_0.1)] rounded-lg flex flex-row items-start justify-start gap-[8px]"
           >
