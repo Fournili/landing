@@ -48,11 +48,17 @@ const FourniliFAQ: React.FC = () => {
         alignItems: 'center',
         backgroundColor: '#fff',   
         margin: 'auto',            
-        fontFamily: 'Circular Std, sans-serif', 
+        fontFamily: isArabic ? 'NotoKufiArabic' : 'Circular Std, sans-serif', 
+        direction: isArabic ? 'rtl' : 'ltr',
       }}>
         {/* Title */}
         <Typography variant="h4" className="leading-[58px] font-medium font-inherit inline-block mq1025:text-19xl mq1025:leading-[46px] mq450:text-10xl mq450:leading-[35px]" 
-        style={{ marginBottom: '24px', fontFamily: 'Circular Std, sans-serif', }}
+        style={{ 
+          marginBottom: '24px', 
+          fontFamily: isArabic ? 'NotoKufiArabic' : 'Circular Std, sans-serif',
+          textAlign: 'center',
+          width: '100%',
+        }}
         >
           FAQs
         </Typography>
@@ -74,26 +80,30 @@ const FourniliFAQ: React.FC = () => {
                   <span style={{ 
                     color: 'black', 
                     fontWeight: 'bold', 
-                    transform: 'rotate(0deg)' 
+                    transform: 'rotate(0deg)',
+                    order: isArabic ? -1 : 1,
                   }}>
                     +
                   </span>
-                }  // Custom icon for accordion
+                }
                 aria-controls={`panel${index + 1}a-content`}
                 id={`panel${index + 1}a-header`}
                 style={{ 
                   padding: '0',  
                   minHeight: '0', 
-                  fontFamily: 'Circular Std, sans-serif', 
+                  fontFamily: isArabic ? 'NotoKufiArabic' : 'Circular Std, sans-serif',
+                  flexDirection: 'row',
                 }}
               >
                 <Typography style={{ 
                   color: 'black', 
-                  textAlign: 'left', 
+                  textAlign: isArabic ? 'right' : 'left', 
                   fontWeight: '500', 
                   fontSize: '24px', 
                   padding: '12px 0', 
                   fontFamily: isArabic ? 'NotoKufiArabic' : 'Circular Std',
+                  width: '100%',
+                  order: 0,
                 }}>
                   {item.question}
                 </Typography>
@@ -104,8 +114,8 @@ const FourniliFAQ: React.FC = () => {
                   flexGrow: 1, 
                   fontFamily: isArabic ? 'NotoKufiArabic' : 'Poppins, sans-serif',   
                   fontWeight: '300',  
-                  direction: i18n.language === 'ar' ? 'rtl' : 'ltr',  
-                  textAlign: i18n.language === 'ar' ? 'right' : 'left',  
+                  direction: isArabic ? 'rtl' : 'ltr',  
+                  textAlign: isArabic ? 'right' : 'left',  
                 }}>
                 <Typography style={{ 
                   color: 'black', 

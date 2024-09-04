@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import type { NextPage } from "next";
 import Head from 'next/head';
+import Script from 'next/script';  // Import the Script component
 import NavBarLP from "../components/new-navbar";
 import Facts from "../components/facts";
 import ForResturantsSection from "../components/for-resturants-section";
@@ -14,11 +15,6 @@ import FunArt from "../components/funart";
 import FourniliFAQ from "../components/faq";
 
 const FourniliHomepageLandingPag: NextPage = () => {
-  useEffect(() => {
-    // Track page view
-    (window as any).umami && (window as any).umami.trackView('/');
-  }, []);
-
   return (
     <>
       <Head>
@@ -29,18 +25,26 @@ const FourniliHomepageLandingPag: NextPage = () => {
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.fournili.com/" />
+        <meta property="og:url" content="https://fournili.co/" />
         <meta property="og:title" content="Fournili - Plateforme de Connexion pour Restaurants et Fournisseurs en Algérie" />
         <meta property="og:description" content="Fournili est une plateforme innovante qui connecte les restaurants et les fournisseurs alimentaires en Algérie. Simplifiez vos commandes, réduisez les erreurs, et gagnez du temps en gérant toutes vos relations commerciales en un seul endroit." />
-        <meta property="og:image" content="https://www.fournili.com/path-to-your-image.jpg" />
+        <meta property="og:image" content="https://fournili.co/hero-section@2.5x.webp" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.fournili.com/" />
+        <meta property="twitter:url" content="https://fournili.co/" />
         <meta property="twitter:title" content="Fournili - Plateforme de Connexion pour Restaurants et Fournisseurs en Algérie" />
         <meta property="twitter:description" content="Fournili est une plateforme innovante qui connecte les restaurants et les fournisseurs alimentaires en Algérie. Simplifiez vos commandes, réduisez les erreurs, et gagnez du temps en gérant toutes vos relations commerciales en un seul endroit." />
-        <meta property="twitter:image" content="https://www.fournili.com/path-to-your-image.jpg" />
+        <meta property="twitter:image" content="https://fournili.co/hero-section@2.5x.webp" />
       </Head>
+
+      {/* Umami Analytics */}
+      <Script
+        src="https://cloud.umami.is/script.js"
+        data-website-id="ebe5bf3e-8654-4498-a9f3-ea476738ff65"
+        strategy="afterInteractive"
+      />
+
       <div className="w-full relative bg-whites-300 flex flex-col items-end justify-start leading-[normal] tracking-[normal]">
         <NavBarLP />
         <HeroSection />
@@ -59,4 +63,5 @@ const FourniliHomepageLandingPag: NextPage = () => {
 };
 
 export default FourniliHomepageLandingPag;
+
 
