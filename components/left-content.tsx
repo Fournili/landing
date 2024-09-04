@@ -6,6 +6,7 @@ export type LeftContentType = {
   service?: string;
   serviceSubheading?: string;
   vector?: string;
+  style?: React.CSSProperties;
 };
 
 const LeftContent: NextPage<LeftContentType> = ({
@@ -13,6 +14,7 @@ const LeftContent: NextPage<LeftContentType> = ({
   service,
   serviceSubheading,
   vector,
+  style,
 }) => {
   const { t, i18n } = useTranslation();
   const isArabic = i18n.language === 'ar';
@@ -21,6 +23,7 @@ const LeftContent: NextPage<LeftContentType> = ({
     <div
       className={`w-[528px] flex flex-col items-start justify-start py-5 px-0 box-border gap-[48px] min-w-[528px] max-w-full text-21xl text-gray-300 font-body mq750:gap-[24px] mq750:min-w-full mq1125:flex-1 ${className}`}
       style={{
+        ...style,
         fontFamily: isArabic ? 'NotoKufiArabic' : 'Circular Std',
         textAlign: isArabic ? 'right' : 'left',
       }}
