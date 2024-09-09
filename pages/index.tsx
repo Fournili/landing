@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import type { NextPage } from "next";
 import Head from 'next/head';
-import Script from 'next/script';  // Import the Script component
+import Script from 'next/script';  
 import NavBarLP from "../components/new-navbar";
 import Facts from "../components/facts";
 import ForResturantsSection from "../components/for-resturants-section";
